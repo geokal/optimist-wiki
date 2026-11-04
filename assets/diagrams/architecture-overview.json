@@ -1,0 +1,10 @@
+{
+  "source": "content/Architecture Overview/Architecture Overview.md",
+  "sourceSha256": "40d73a842d360e44d3cbd54138c9afa663ff9f006679726ae8850d8fd16aabce",
+  "svgSha256": "b358fffc211a8033a2c0ed1f7d62be22d0595b4ea7fb015a822957d5fb8e01ea",
+  "renderer": "Qoder installed diagram runtime; Mermaid 11.16.0; qoder-flowchart-v1",
+  "width": 1180.826171875,
+  "height": 1113.5999755859375,
+  "nodes": 11,
+  "edges": 17
+}

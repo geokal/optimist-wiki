@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Optimist.Orchestrator Wiki</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@5/lib/themes/vue.css" />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <div id="app">Loading wiki…</div>
+    <script>
+      function renderMermaidDiagrams() {
+        document.querySelectorAll('.mermaid').forEach((element, index) => {
+          if (element.dataset.rendered) return;
+          const source = element.textContent;
+          element.dataset.rendered = 'true';
+          const diagramId = `diagram-${index}-${Date.now()}`;
+          const rendering = element.classList.contains('architecture-diagram')
+            ? import('./assets/architecture-renderer.js').then(module => module.renderArchitecture(diagramId, source))
+            : mermaid.render(diagramId, source);
+          Promise.resolve(rendering)
+            .then((result) => {
+              element.innerHTML = typeof result === 'string' ? result : result.svg;
+            })
+            .catch((error) => {
+              element.dataset.rendered = 'error';
+              const message = document.createElement('p');
+              message.textContent = 'Diagram could not render: ' + error.message;
+              element.prepend(message);
+            });
+        });
+      }
+
+      function decodeMermaidSource(source) {
+        return source
+          .replace(/&lt;/g, '<')
+          .replace(/&gt;/g, '>')
+          .replace(/&quot;/g, '"')
+          .replace(/&#39;/g, "'")
+          .replace(/&amp;/g, '&');
+      }
+
+      function escapeMermaidSource(source) {
+        return source
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;');
+      }
+
+      window.$docsify = {
+        name: 'Optimist.Orchestrator Wiki',
+        homepage: 'README.md',
+        loadSidebar: true,
+        subMaxLevel: 3,
+        plugins: [
+          function mermaidPlugin(hook) {
+            hook.doneEach(() => setTimeout(renderMermaidDiagrams, 0));
+          },
+        ],
+        search: {
+          paths: 'auto',
+          placeholder: 'Search wiki pages',
+          noData: 'No matching wiki pages',
+          depth: 3,
+        },
+        markdown: {
+          renderer: {
+            code(code, lang) {
+              if (lang === 'mermaid') {
+                const id = `mermaid-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+                code = decodeMermaidSource(code);
+                const architectureClass = code.includes('System Level (MEO)') && code.includes('External Systems') && code.includes('Host Level (MEPM + VIM)')
+                  ? ' architecture-diagram'
+                  : '';
+                return `<div class="mermaid${architectureClass}" id="${id}">${escapeMermaidSource(code)}</div>`;
+              }
+              return this.origin.code.apply(this, arguments);
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@12.0.0/dist/mermaid.min.js"></script>
+    <script>
+      mermaid.initialize({
+        startOnLoad: false,
+        securityLevel: 'loose',
+        theme: 'dark',
+        look: 'classic',
+        layout: 'dagre',
+        flowchart: {
+          curve: 'stepAfter',
+          htmlLabels: true,
+          nodeSpacing: 40,
+          rankSpacing: 60,
+        },
+        themeVariables: {
+          background: '#202522',
+          fontFamily: 'Arial, sans-serif',
+          fontSize: '16px',
+          primaryColor: '#2d3530',
+          primaryTextColor: '#e6ebe7',
+          primaryBorderColor: '#8e9990',
+          lineColor: '#a9b2aa',
+          secondaryColor: '#29302c',
+          tertiaryColor: '#232825',
+          clusterBkg: '#202522',
+          clusterBorder: '#8e9990',
+          edgeLabelBackground: '#202522',
+        },
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@5/lib/docsify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@5/lib/plugins/search.min.js"></script>
+  </body>
+</html>

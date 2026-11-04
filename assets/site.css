@@ -1,0 +1,54 @@
+:root {
+  --theme-color: #2f81f7;
+  --sidebar-width: 330px;
+}
+
+body {
+  color: #24292f;
+}
+
+.app-name-link {
+  font-weight: 700;
+}
+
+.sidebar-nav > ul > li > a {
+  font-weight: 700;
+}
+
+.sidebar-nav ul ul a {
+  font-size: 0.92rem;
+}
+
+.markdown-section {
+  max-width: 1100px;
+}
+
+.markdown-section pre > code {
+  border-radius: 6px;
+}
+
+.mermaid {
+  background: #202522;
+  border-radius: 8px;
+  margin: 1rem 0;
+  overflow-x: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.mermaid svg {
+  background: #202522 !important;
+}
+
+.architecture-diagram {
+  overflow: auto;
+  background: #252b26;
+  text-align: left;
+}
+
+.architecture-diagram svg {
+  background: #252b26 !important;
+  max-width: none !important;
+  display: block;
+  margin: 0 auto;
+}

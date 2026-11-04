@@ -1,0 +1,42 @@
+{
+  "startOnLoad": false,
+  "securityLevel": "strict",
+  "suppressErrorRendering": true,
+  "htmlLabels": false,
+  "theme": "base",
+  "themeVariables": {
+    "background": "#222523",
+    "mainBkg": "#2d332e",
+    "primaryColor": "#2d332e",
+    "primaryBorderColor": "#4b554d",
+    "primaryTextColor": "#d9dcd9",
+    "secondaryColor": "#252b26",
+    "secondaryBorderColor": "#404842",
+    "secondaryTextColor": "#b3bab4",
+    "lineColor": "#949d96",
+    "textColor": "#d9dcd9",
+    "edgeLabelBackground": "#222523",
+    "fontFamily": "system-ui",
+    "fontSize": "14px"
+  },
+  "flowchart": {
+    "defaultRenderer": "elk",
+    "htmlLabels": false,
+    "nodeSpacing": 40,
+    "rankSpacing": 40,
+    "curve": "linear",
+    "padding": 12,
+    "subGraphTitleMargin": {
+      "top": 12,
+      "bottom": 4
+    }
+  },
+  "elk": {
+    "mergeEdges": false,
+    "nodePlacementStrategy": "BRANDES_KOEPF",
+    "cycleBreakingStrategy": "MODEL_ORDER",
+    "forceNodeModelOrder": true,
+    "considerModelOrder": "NODES_AND_EDGES"
+  },
+  "themeCSS": "\n    .nodeLabel, .node .label, .node .label text, .node .label tspan { font-size:14px; font-weight:500; }\n    .node rect, .node polygon, .node circle, .node ellipse, .node path { fill:#252b26; stroke:#404842; }\n    .cluster rect { fill:#222523; stroke:#404842; }\n    .node rect, .cluster rect { rx:8px; ry:8px; stroke-width:1px; }\n    .cluster-label text, .cluster-label span { fill:#b3bab4; color:#b3bab4; }\n    .flowchart-link { stroke-width:1px; stroke-linecap:round; stroke-linejoin:round; }\n  "
+}
