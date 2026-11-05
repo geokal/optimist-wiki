@@ -1,21 +1,5 @@
 # System Overview and ETSI MEC Compliance
 
-<cite>
-**Referenced Files in This Document**
-- `README.md`
-- `docs/ARCHITECTURE.md`
-- `docs/CONTEXT-MAP.md`
-- `docs/CSAR_DISTRIBUTION_AND_LIFECYCLE_ARCHITECTURE.md`
-- `docs/MEPM_LCM_API.md`
-- `docs/ONBOARDING_AND_LIFECYCLE_ARCHITECTURE_REVIEW.md`
-- `docs/ADR/0007-apisix-api-gateway.md`
-- `docs/ADR/0009-meo-modular-monolith.md`
-- `docs/ADR/0045-meo-placement-engine-and-unified-catalogue-inventory-model.md`
-- `docs/contexts/meao.md`
-- `docs/contexts/platformmanager.md`
-- `docs/contexts/vimadapter.md`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -458,3 +442,18 @@ Error handling in the system combines HTTP status codes, RFC 7807 Problem Detail
 Optimist.Orchestrator implements ETSI GS MEC 010-2 v3.1.1 by clearly separating MEO orchestration intent from MEPM execution and VIM provisioning. The modular monolith approach keeps bounded contexts explicit while avoiding the cost of unnecessary microservice decomposition. CSAR-based onboarding, OCI content-addressed distribution, Temporal workflows, placement-aware host selection, and gRPC-backed VIM adapters form a cohesive edge-native architecture.
 
 For operators, the most important boundary is that package onboarding precedes lifecycle operations, placement selects a host based on real constraints, granting authorizes MEPM execution, and lifecycle outcomes are observed through operation occurrences and subscription callbacks. For maintainers, the most important architectural principle is that ETSI roles describe responsibilities, while code organization should prioritize clarity, durability, and edge suitability over distributed complexity.
+
+> **Referenced Files in This Document**
+>
+> - `README.md`
+> - `docs/ARCHITECTURE.md`
+> - `docs/CONTEXT-MAP.md`
+> - `docs/CSAR_DISTRIBUTION_AND_LIFECYCLE_ARCHITECTURE.md`
+> - `docs/MEPM_LCM_API.md`
+> - `docs/ONBOARDING_AND_LIFECYCLE_ARCHITECTURE_REVIEW.md`
+> - `docs/ADR/0007-apisix-api-gateway.md`
+> - `docs/ADR/0009-meo-modular-monolith.md`
+> - `docs/ADR/0045-meo-placement-engine-and-unified-catalogue-inventory-model.md`
+> - `docs/contexts/meao.md`
+> - `docs/contexts/platformmanager.md`
+> - `docs/contexts/vimadapter.md`

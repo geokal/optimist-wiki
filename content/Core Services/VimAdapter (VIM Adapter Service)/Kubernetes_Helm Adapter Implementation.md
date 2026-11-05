@@ -1,23 +1,5 @@
 # Kubernetes/Helm Adapter Implementation
 
-<cite>
-**Referenced Files in This Document**
-- `docs/ADR/0019-kubernetes-first-vim.md`
-- `docs/ADR/0050-internal-route-namespace-isolation.md`
-- `docs/ADR/0056-kubernetes-helm-pre-upgrade-migration-hooks-and-database-readiness.md`
-- `docs/ADR/0061-kubernetes-persistent-storage-and-in-cluster-zot-registry.md`
-- `docs/OPENSTACK_VIM_ADAPTER.md`
-- `docs/VIM_CONFIGURATION_AND_INSTANTIATION_FLOW.md`
-- `src/VimAdapter/src/adapters/factory.py`
-- `src/VimAdapter/src/adapters/helm/helm_adapter.py`
-- `src/VimAdapter/src/adapters/helm/helm_client.py`
-- `src/VimAdapter/src/clients/k8s_client.py`
-- `src/VimAdapter/src/utils/config_store.py`
-- `charts/optimist-apps/values.yaml`
-- `charts/optimist-apps/templates/deployment.yaml`
-- `charts/optimist-apps/templates/pvc.yaml`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -476,3 +458,20 @@ For production use, operators should:
 - Extend observability with Prometheus-compatible metrics at the application and cluster levels.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `docs/ADR/0019-kubernetes-first-vim.md`
+> - `docs/ADR/0050-internal-route-namespace-isolation.md`
+> - `docs/ADR/0056-kubernetes-helm-pre-upgrade-migration-hooks-and-database-readiness.md`
+> - `docs/ADR/0061-kubernetes-persistent-storage-and-in-cluster-zot-registry.md`
+> - `docs/OPENSTACK_VIM_ADAPTER.md`
+> - `docs/VIM_CONFIGURATION_AND_INSTANTIATION_FLOW.md`
+> - `src/VimAdapter/src/adapters/factory.py`
+> - `src/VimAdapter/src/adapters/helm/helm_adapter.py`
+> - `src/VimAdapter/src/adapters/helm/helm_client.py`
+> - `src/VimAdapter/src/clients/k8s_client.py`
+> - `src/VimAdapter/src/utils/config_store.py`
+> - `charts/optimist-apps/values.yaml`
+> - `charts/optimist-apps/templates/deployment.yaml`
+> - `charts/optimist-apps/templates/pvc.yaml`

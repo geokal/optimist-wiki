@@ -1,29 +1,5 @@
 # Security & Authentication
 
-<cite>
-**Referenced Files in This Document**   
-- `docs/ADR/0007-apisix-api-gateway.md`
-- `docker/apisix_conf/config.yaml`
-- `docker/apisix_conf/apisix-routes.yaml`
-- `gitops/apps/keycloak-realm/optimist-realm.json`
-- `src/Meao/appsettings.json`
-- `src/ApmApi/appsettings.json`
-- `src/Catalogue/appsettings.json`
-- `src/PlatformManager/PlatformManager/appsettings.json`
-- `src/Meao/Program.cs`
-- `src/ApmApi/Program.cs`
-- `src/Catalogue/Program.cs`
-- `src/PlatformManager/PlatformManager/Program.cs`
-- `src/Meao/Infrastructure/KeycloakServiceTokenHandler.cs`
-- `src/PlatformManager/PlatformManager/Infrastructure/KeycloakServiceTokenHandler.cs`
-- `src/Meao/Services/KeycloakTokenProvider.cs`
-- `src/ApmApi/Services/KeycloakTokenProvider.cs`
-- `src/PlatformManager/PlatformManager/Services/KeycloakTokenProvider.cs`
-- `src/Catalogue/Endpoints/TopologyEndpoints.cs`
-- `src/Catalogue/Endpoints/AppPackageEndpoints.cs`
-- `src/Meao.Tests.Unit/SubscriptionEndpointsRoutingAndAuthTests.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Security Architecture Overview](#security-architecture-overview)
@@ -661,3 +637,26 @@ Key strengths include:
 - Clear separation of concerns between authentication and authorization
 
 Areas for improvement include enhanced audit logging, mTLS for service communication, and more granular access control policies. The current implementation provides a solid foundation that can be extended with additional security controls as requirements evolve.
+
+> **Referenced Files in This Document**
+>
+> - `docs/ADR/0007-apisix-api-gateway.md`
+> - `docker/apisix_conf/config.yaml`
+> - `docker/apisix_conf/apisix-routes.yaml`
+> - `gitops/apps/keycloak-realm/optimist-realm.json`
+> - `src/Meao/appsettings.json`
+> - `src/ApmApi/appsettings.json`
+> - `src/Catalogue/appsettings.json`
+> - `src/PlatformManager/PlatformManager/appsettings.json`
+> - `src/Meao/Program.cs`
+> - `src/ApmApi/Program.cs`
+> - `src/Catalogue/Program.cs`
+> - `src/PlatformManager/PlatformManager/Program.cs`
+> - `src/Meao/Infrastructure/KeycloakServiceTokenHandler.cs`
+> - `src/PlatformManager/PlatformManager/Infrastructure/KeycloakServiceTokenHandler.cs`
+> - `src/Meao/Services/KeycloakTokenProvider.cs`
+> - `src/ApmApi/Services/KeycloakTokenProvider.cs`
+> - `src/PlatformManager/PlatformManager/Services/KeycloakTokenProvider.cs`
+> - `src/Catalogue/Endpoints/TopologyEndpoints.cs`
+> - `src/Catalogue/Endpoints/AppPackageEndpoints.cs`
+> - `src/Meao.Tests.Unit/SubscriptionEndpointsRoutingAndAuthTests.cs`

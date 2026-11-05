@@ -1,25 +1,5 @@
 # Core Data Flows and Integration Patterns
 
-<cite>
-**Referenced Files in This Document**
-- `README.md`
-- `docs/ARCHITECTURE.md`
-- `docs/CSAR_DISTRIBUTION_AND_LIFECYCLE_ARCHITECTURE.md`
-- `docs/VIM_CONFIGURATION_AND_INSTANTIATION_FLOW.md`
-- `docs/ONBOARDING_AND_LIFECYCLE_ARCHITECTURE_REVIEW.md`
-- `src/Meao/Program.cs`
-- `src/Meao/Workflows/CreateAppInstWF.cs`
-- `src/Meao/Workflows/InstantiateAppInstWF.cs`
-- `src/Meao/Workflows/TerminateAppinstWF.cs`
-- `src/Meao/Workflows/OnboardAppPkgWF.cs`
-- `src/Meao/Validators/GrantRequestValidator.cs`
-- `src/Meao/Domain/Placement/PlacementEngine.cs`
-- `src/PlatformManager/PlatformManager/Program.cs`
-- `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
-- `src/VimAdapter/main.py`
-- `src/VimAdapter/src/server/lcm_grpc_server.py`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -583,3 +563,22 @@ Optimist.Orchestrator implements a durable, event-driven MEC orchestration stack
 - PlatformManager executes lifecycle operations asynchronously and bridges REST to VimAdapter gRPC.
 - VimAdapter provisions workloads onto Kubernetes or OpenStack.
 - Compensation mechanisms, crash recovery, and hybrid signal/poll synchronization provide resilience while accepting eventual consistency between MEAO, Catalogue, MEPM, and VIM states.
+
+> **Referenced Files in This Document**
+>
+> - `README.md`
+> - `docs/ARCHITECTURE.md`
+> - `docs/CSAR_DISTRIBUTION_AND_LIFECYCLE_ARCHITECTURE.md`
+> - `docs/VIM_CONFIGURATION_AND_INSTANTIATION_FLOW.md`
+> - `docs/ONBOARDING_AND_LIFECYCLE_ARCHITECTURE_REVIEW.md`
+> - `src/Meao/Program.cs`
+> - `src/Meao/Workflows/CreateAppInstWF.cs`
+> - `src/Meao/Workflows/InstantiateAppInstWF.cs`
+> - `src/Meao/Workflows/TerminateAppinstWF.cs`
+> - `src/Meao/Workflows/OnboardAppPkgWF.cs`
+> - `src/Meao/Validators/GrantRequestValidator.cs`
+> - `src/Meao/Domain/Placement/PlacementEngine.cs`
+> - `src/PlatformManager/PlatformManager/Program.cs`
+> - `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
+> - `src/VimAdapter/main.py`
+> - `src/VimAdapter/src/server/lcm_grpc_server.py`

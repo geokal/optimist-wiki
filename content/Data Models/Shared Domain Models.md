@@ -1,35 +1,5 @@
 # Shared Domain Models
 
-<cite>
-**Referenced Files in This Document**
-- `src/Common/Models/VimConnectionInfoDto.cs`
-- `src/Catalogue/Models/AppInstance.cs`
-- `src/Catalogue/Models/EdgeHost.cs`
-- `src/Catalogue/Models/AppPackage.cs`
-- `src/Meao/Migrations/MeaoDBContextModelSnapshot.cs`
-- `src/Meao/Migrations/20260819104304_PostgresInitial.cs`
-- `src/Meao/Migrations/20260821085847_AddAppInstanceVimConnectionInfoKeyedRelationship.cs`
-- `src/PlatformManager/PlatformManager/Migrations/LcmDbContextModelSnapshot.cs`
-- `src/PlatformManager/PlatformManager/Migrations/20260728214624_PostgresInitial.cs`
-- `src/PlatformManager/PlatformManager/Migrations/20260815130910_AddPlatformConfigJsonToAppInstance.cs`
-- `src/PlatformManager/PlatformManager/Migrations/20260821200126_AddCsarDigest.cs`
-- `src/PlatformManager/PlatformManager/Migrations/20260919051330_PersistLcmWorkPayload.cs`
-- `src/PlatformManager/PlatformManager/Models/AppInstance.cs`
-- `src/PlatformManager/PlatformManager/Models/AppPkgRecord.cs`
-- `src/PlatformManager/PlatformManager/Models/SubscriptionInfo.cs`
-- `src/Meao/Endpoints/GrantEndpoints.cs`
-- `src/Meao/Requests/CreateAppInstRequest.cs`
-- `src/Meao/Validators/SubscriptionRequestValidator.cs`
-- `src/ApmApi/Endpoints/ApmEndpoints.cs`
-- `src/ApmApi/Migrations/20260813095316_AddSubscriptionFilters.Designer.cs`
-- `src/Catalogue/Endpoints/MecHostEndpoints.cs`
-- `src/Catalogue/Endpoints/AppInstanceEndpoints.cs`
-- `src/Catalogue/Endpoints/AppPackageEndpoints.cs`
-- `docs/docs/ADR/0015-shared-dto-library.md`
-- `docs/docs/ADR/0042-etsi-vimconnectioninfo-representation-and-audit-discrepancy-resolutions.md`
-- `docs/docs/ADR/0048-canonical-wire-contracts-and-bounded-context-realignment.md`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -757,3 +727,32 @@ graph LR
 The shared domain models form a cohesive boundary between Meao, ApmApi, Catalogue, and PlatformManager. Catalogue owns canonical package and host inventory; Meao orchestrates lifecycle, grants, and subscriptions; PlatformManager persists LCM work and forwards operations; ApmApi drives onboarding and subscription filters. Strong identity through digests, immutable snapshots at instantiation, optimistic concurrency, and ETSI-aligned DTOs together provide a robust foundation for MEC compliance and cross-service consistency.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `src/Common/Models/VimConnectionInfoDto.cs`
+> - `src/Catalogue/Models/AppInstance.cs`
+> - `src/Catalogue/Models/EdgeHost.cs`
+> - `src/Catalogue/Models/AppPackage.cs`
+> - `src/Meao/Migrations/MeaoDBContextModelSnapshot.cs`
+> - `src/Meao/Migrations/20260819104304_PostgresInitial.cs`
+> - `src/Meao/Migrations/20260821085847_AddAppInstanceVimConnectionInfoKeyedRelationship.cs`
+> - `src/PlatformManager/PlatformManager/Migrations/LcmDbContextModelSnapshot.cs`
+> - `src/PlatformManager/PlatformManager/Migrations/20260728214624_PostgresInitial.cs`
+> - `src/PlatformManager/PlatformManager/Migrations/20260815130910_AddPlatformConfigJsonToAppInstance.cs`
+> - `src/PlatformManager/PlatformManager/Migrations/20260821200126_AddCsarDigest.cs`
+> - `src/PlatformManager/PlatformManager/Migrations/20260919051330_PersistLcmWorkPayload.cs`
+> - `src/PlatformManager/PlatformManager/Models/AppInstance.cs`
+> - `src/PlatformManager/PlatformManager/Models/AppPkgRecord.cs`
+> - `src/PlatformManager/PlatformManager/Models/SubscriptionInfo.cs`
+> - `src/Meao/Endpoints/GrantEndpoints.cs`
+> - `src/Meao/Requests/CreateAppInstRequest.cs`
+> - `src/Meao/Validators/SubscriptionRequestValidator.cs`
+> - `src/ApmApi/Endpoints/ApmEndpoints.cs`
+> - `src/ApmApi/Migrations/20260813095316_AddSubscriptionFilters.Designer.cs`
+> - `src/Catalogue/Endpoints/MecHostEndpoints.cs`
+> - `src/Catalogue/Endpoints/AppInstanceEndpoints.cs`
+> - `src/Catalogue/Endpoints/AppPackageEndpoints.cs`
+> - `docs/docs/ADR/0015-shared-dto-library.md`
+> - `docs/docs/ADR/0042-etsi-vimconnectioninfo-representation-and-audit-discrepancy-resolutions.md`
+> - `docs/docs/ADR/0048-canonical-wire-contracts-and-bounded-context-realignment.md`

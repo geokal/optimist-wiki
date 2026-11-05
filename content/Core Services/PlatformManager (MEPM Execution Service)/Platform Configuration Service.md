@@ -1,22 +1,5 @@
 # Platform Configuration Service
 
-<cite>
-**Referenced Files in This Document**   
-- `src/PlatformManager/PlatformManager/Services/IConfigService.cs`
-- `src/PlatformManager/PlatformManager/Services/ConfigService.cs`
-- `src/PlatformManager/PlatformManager/Endpoints/PlatformConfigEndpoints.cs`
-- `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
-- `src/Common/Models/ConfigPlatformForAppRequestDto.cs`
-- `src/Common/Models/VimConnectionInfoDto.cs`
-- `src/Common/Models/GrantDtos.cs`
-- `src/Meao/Requests/SubscriptionRequestDto.cs`
-- `src/PlatformManager/PlatformManager/Requests/SubscriptionRequestDto.cs`
-- `src/PlatformManager/PlatformManager/Requests/DistributeRequest.cs`
-- `src/PlatformManager/PlatformManager/appsettings.json`
-- `docs/ADR/0029-mepm-package-distribution-vs-onboarding.md`
-- `docs/ADR/0031-separate-internal-vim-config-upload-from-etsi-platform-configuration.md`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -495,3 +478,19 @@ Operational guidance should therefore keep these concerns separate:
 - Treat `ResourceDefinition` validation carefully because the current validator only checks non-null arrays and individual element constraints.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `src/PlatformManager/PlatformManager/Services/IConfigService.cs`
+> - `src/PlatformManager/PlatformManager/Services/ConfigService.cs`
+> - `src/PlatformManager/PlatformManager/Endpoints/PlatformConfigEndpoints.cs`
+> - `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
+> - `src/Common/Models/ConfigPlatformForAppRequestDto.cs`
+> - `src/Common/Models/VimConnectionInfoDto.cs`
+> - `src/Common/Models/GrantDtos.cs`
+> - `src/Meao/Requests/SubscriptionRequestDto.cs`
+> - `src/PlatformManager/PlatformManager/Requests/SubscriptionRequestDto.cs`
+> - `src/PlatformManager/PlatformManager/Requests/DistributeRequest.cs`
+> - `src/PlatformManager/PlatformManager/appsettings.json`
+> - `docs/ADR/0029-mepm-package-distribution-vs-onboarding.md`
+> - `docs/ADR/0031-separate-internal-vim-config-upload-from-etsi-platform-configuration.md`

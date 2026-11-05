@@ -1,19 +1,5 @@
 # ETSI App Lifecycle Management API
 
-<cite>
-**Referenced Files in This Document**   
-- `src/PlatformManager/PlatformManager/Program.cs`
-- `src/PlatformManager/PlatformManager/Endpoints/LcmEndpoint.cs`
-- `src/PlatformManager/PlatformManager/Endpoints/AppInstanceEndpoints.cs`
-- `src/PlatformManager/PlatformManager/Endpoints/LcmOpOccEndpoints.cs`
-- `src/PlatformManager/PlatformManager/Models/AppInstance.cs`
-- `src/PlatformManager/PlatformManager/Requests/SubscriptionRequestDto.cs`
-- `src/PlatformManager/PlatformManager/Requests/TerminateRequest.cs`
-- `docs/docs/ADR/0025-rfc7807-structured-error-model.md`
-- `docs/docs/ADR/0032-keep-applcmopoccnotification-aligned-to-etsi-fields.md`
-- `docs/docs/ADR/0059-etsi-subscription-callback-authentication-and-prefix-hardening.md`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -458,3 +444,16 @@ Errors include at least `type`, `title`, `detail`, and optionally `instance`. Th
 PlatformManager exposes the ETSI App Lifecycle Management API at `/app_lcm/v1` with three clearly separated resource groups. Consumers authenticate with Keycloak JWTs, submit lifecycle operations asynchronously, and observe results through polling or subscription callbacks. Correct client behavior requires respecting ETSI-style state names, handling `202 Accepted` responses, avoiding concurrent operations on the same instance, and treating `FAILED_TEMP` as a recoverable intermediate state. Security-sensitive aspects—MEAO grant verification, callback URI hardening, and structured error reporting—are enforced at the PlatformManager boundary.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `src/PlatformManager/PlatformManager/Program.cs`
+> - `src/PlatformManager/PlatformManager/Endpoints/LcmEndpoint.cs`
+> - `src/PlatformManager/PlatformManager/Endpoints/AppInstanceEndpoints.cs`
+> - `src/PlatformManager/PlatformManager/Endpoints/LcmOpOccEndpoints.cs`
+> - `src/PlatformManager/PlatformManager/Models/AppInstance.cs`
+> - `src/PlatformManager/PlatformManager/Requests/SubscriptionRequestDto.cs`
+> - `src/PlatformManager/PlatformManager/Requests/TerminateRequest.cs`
+> - `docs/docs/ADR/0025-rfc7807-structured-error-model.md`
+> - `docs/docs/ADR/0032-keep-applcmopoccnotification-aligned-to-etsi-fields.md`
+> - `docs/docs/ADR/0059-etsi-subscription-callback-authentication-and-prefix-hardening.md`

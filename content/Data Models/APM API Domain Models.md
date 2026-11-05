@@ -1,37 +1,5 @@
 # APM API Domain Models
 
-<cite>
-**Referenced Files in This Document**
-- `src/Common/Models/CsarManifestParser.cs`
-- `src/ApmApi/Models/AppPkgInfo.cs`
-- `src/ApmApi/Dto/AppPkgInfoDto.cs`
-- `src/ApmApi/Models/AppPkgInfoLinks.cs`
-- `src/ApmApi/Requests/AppPkgSubscription.cs`
-- `src/ApmApi/Models/AppPkgSubscriptionInfo.cs`
-- `src/ApmApi/Models/AppPkgSubscriptionFilter.cs`
-- `src/ApmApi/Models/AppPkgNotification.cs`
-- `src/ApmApi/Models/AppPkgSubscriptionLinkList.cs`
-- `src/ApmApi/Dto/AppPkgSubscriptionInfoDto.cs`
-- `src/ApmApi/Dto/AppPkgSubscriptionDto.cs`
-- `src/ApmApi/Dto/AppPkgNotificationDto.cs`
-- `src/ApmApi/Dto/AppPkgSubscriptionLinkListDto.cs`
-- `src/ApmApi/Models/ApmDbContext.cs`
-- `src/ApmApi/Repositories/impl/SubscriptionRepository.cs`
-- `src/ApmApi/Repositories/ISubscriptionRepository.cs`
-- `src/ApmApi/Services/SubscriptionsService.cs`
-- `src/ApmApi/Services/AppPackageService.cs`
-- `src/ApmApi/Services/AppDDeserializerService.cs`
-- `src/ApmApi/Services/PackageValidator.cs`
-- `src/ApmApi/Migrations/20260813095316_AddSubscriptionFilters.cs`
-- `src/ApmApi/Migrations/20260908112511_StronglyTypedAppDDescriptors.cs`
-- `src/Meao/Validators/SubscriptionRequestValidator.cs`
-- `src/Meao/Services/OnboardingCallbackHandler.cs`
-- `docs/docs/ADR/0004-package-validation-authority-and-csar-integrity.md`
-- `docs/docs/ADR/0036-appd-architecture-for-package-onboarding-and-meo-consumption.md`
-- `docs/docs/ADR/0041-oci-zot-oras-csar-distribution.md`
-- `docs/docs/ADR/0059-etsi-subscription-callback-authentication-and-prefix-hardening.md`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -540,3 +508,34 @@ The APIM API domain models for package management and subscription handling are 
 - Security relies on strict manifest parsing, SHA-256-only integrity checks, callback URL hardening, and controlled access patterns.
 
 For further architectural context, consult the referenced ADRs covering package validation, AppD architecture, registry distribution, and subscription callback authentication.
+
+> **Referenced Files in This Document**
+>
+> - `src/Common/Models/CsarManifestParser.cs`
+> - `src/ApmApi/Models/AppPkgInfo.cs`
+> - `src/ApmApi/Dto/AppPkgInfoDto.cs`
+> - `src/ApmApi/Models/AppPkgInfoLinks.cs`
+> - `src/ApmApi/Requests/AppPkgSubscription.cs`
+> - `src/ApmApi/Models/AppPkgSubscriptionInfo.cs`
+> - `src/ApmApi/Models/AppPkgSubscriptionFilter.cs`
+> - `src/ApmApi/Models/AppPkgNotification.cs`
+> - `src/ApmApi/Models/AppPkgSubscriptionLinkList.cs`
+> - `src/ApmApi/Dto/AppPkgSubscriptionInfoDto.cs`
+> - `src/ApmApi/Dto/AppPkgSubscriptionDto.cs`
+> - `src/ApmApi/Dto/AppPkgNotificationDto.cs`
+> - `src/ApmApi/Dto/AppPkgSubscriptionLinkListDto.cs`
+> - `src/ApmApi/Models/ApmDbContext.cs`
+> - `src/ApmApi/Repositories/impl/SubscriptionRepository.cs`
+> - `src/ApmApi/Repositories/ISubscriptionRepository.cs`
+> - `src/ApmApi/Services/SubscriptionsService.cs`
+> - `src/ApmApi/Services/AppPackageService.cs`
+> - `src/ApmApi/Services/AppDDeserializerService.cs`
+> - `src/ApmApi/Services/PackageValidator.cs`
+> - `src/ApmApi/Migrations/20260813095316_AddSubscriptionFilters.cs`
+> - `src/ApmApi/Migrations/20260908112511_StronglyTypedAppDDescriptors.cs`
+> - `src/Meao/Validators/SubscriptionRequestValidator.cs`
+> - `src/Meao/Services/OnboardingCallbackHandler.cs`
+> - `docs/docs/ADR/0004-package-validation-authority-and-csar-integrity.md`
+> - `docs/docs/ADR/0036-appd-architecture-for-package-onboarding-and-meo-consumption.md`
+> - `docs/docs/ADR/0041-oci-zot-oras-csar-distribution.md`
+> - `docs/docs/ADR/0059-etsi-subscription-callback-authentication-and-prefix-hardening.md`

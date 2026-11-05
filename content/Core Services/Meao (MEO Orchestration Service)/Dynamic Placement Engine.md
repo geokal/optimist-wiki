@@ -1,22 +1,5 @@
 # Dynamic Placement Engine
 
-<cite>
-**Referenced Files in This Document**
-- `src/Meao/Domain/Placement/IPlacementEngine.cs`
-- `src/Meao/Domain/Placement/IPlacementPolicy.cs`
-- `src/Meao/Domain/Placement/PlacementConstraints.cs`
-- `src/Meao/Domain/Placement/PlacementDecision.cs`
-- `src/Meao/Domain/Placement/PlacementEngine.cs`
-- `src/Meao/Domain/Placement/Policies/CostAwarePolicy.cs`
-- `src/Meao/Domain/Placement/Policies/GpuRequirementPolicy.cs`
-- `src/Meao/Domain/Placement/Policies/TenantSiteAffinityPolicy.cs`
-- `src/Meao/Activities/PlacementActivities.cs`
-- `src/Catalogue/Models/EdgeHost.cs`
-- `src/Catalogue/Endpoints/MecHostEndpoints.cs`
-- `docs/ADR/0045-meo-placement-engine-and-unified-catalogue-inventory-model.md`
-- `src/Meao.Tests.Unit/PlacementEngineTests.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -532,3 +515,19 @@ Overall complexity is approximately **O(H log H + H × (S + P + O))**.
 The dynamic placement engine implements a clear three-stage selection pipeline: hard filtering, policy eligibility, and soft ranking. Its strength lies in separating immutable resource constraints from extensible placement policies and keeping inventory access focused on the Catalogue. For large-scale deployments, the primary performance concerns are Catalogue payload size, policy count, and service-matching overhead. Extending placement behavior is straightforward through additional `IPlacementPolicy` implementations, while maintaining deterministic decisions through ordered evaluation and IP-based tie-breaking.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `src/Meao/Domain/Placement/IPlacementEngine.cs`
+> - `src/Meao/Domain/Placement/IPlacementPolicy.cs`
+> - `src/Meao/Domain/Placement/PlacementConstraints.cs`
+> - `src/Meao/Domain/Placement/PlacementDecision.cs`
+> - `src/Meao/Domain/Placement/PlacementEngine.cs`
+> - `src/Meao/Domain/Placement/Policies/CostAwarePolicy.cs`
+> - `src/Meao/Domain/Placement/Policies/GpuRequirementPolicy.cs`
+> - `src/Meao/Domain/Placement/Policies/TenantSiteAffinityPolicy.cs`
+> - `src/Meao/Activities/PlacementActivities.cs`
+> - `src/Catalogue/Models/EdgeHost.cs`
+> - `src/Catalogue/Endpoints/MecHostEndpoints.cs`
+> - `docs/ADR/0045-meo-placement-engine-and-unified-catalogue-inventory-model.md`
+> - `src/Meao.Tests.Unit/PlacementEngineTests.cs`

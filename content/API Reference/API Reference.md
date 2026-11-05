@@ -1,21 +1,5 @@
 # API Reference
 
-<cite>
-**Referenced Files in This Document**
-- `docs/API.md`
-- `src/Meao/Endpoints/AppInstanceEndpoints.cs`
-- `src/Meao/Endpoints/GrantEndpoints.cs`
-- `src/Meao/Endpoints/AppInstanceInfoEndpoints.cs`
-- `src/Meao/Endpoints/SubscriptionEndpoints.cs`
-- `src/ApmApi/Endpoints/ApmEndpoints.cs`
-- `src/Catalogue/Endpoints/MepmEndpoints.cs`
-- `src/PlatformManager/PlatformManager/Endpoints/LcmEndpoint.cs`
-- `src/PlatformManager/PlatformManager/Endpoints/AppInstanceEndpoints.cs`
-- `src/PlatformManager/PlatformManager/Endpoints/LcmOpOccEndpoints.cs`
-- `src/PlatformManager/PlatformManager/Endpoints/PlatformConfigEndpoints.cs`
-- `src/PlatformManager/PlatformManager/Program.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -729,3 +713,18 @@ Optimist.Orchestrator exposes three primary ETSI-aligned API families plus inter
 Authentication is centralized through Keycloak JWT Bearer tokens. Authorization is enforced either through explicit route groups or service-level fallback policies. Errors are standardized using RFC 7807 Problem Details. There is no built-in rate limiting. Backwards compatibility should be treated carefully: ETSI-standard surfaces should preserve field names and semantics, while internal and MEPM-local extensions are implementation-specific and may evolve independently.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `docs/API.md`
+> - `src/Meao/Endpoints/AppInstanceEndpoints.cs`
+> - `src/Meao/Endpoints/GrantEndpoints.cs`
+> - `src/Meao/Endpoints/AppInstanceInfoEndpoints.cs`
+> - `src/Meao/Endpoints/SubscriptionEndpoints.cs`
+> - `src/ApmApi/Endpoints/ApmEndpoints.cs`
+> - `src/Catalogue/Endpoints/MepmEndpoints.cs`
+> - `src/PlatformManager/PlatformManager/Endpoints/LcmEndpoint.cs`
+> - `src/PlatformManager/PlatformManager/Endpoints/AppInstanceEndpoints.cs`
+> - `src/PlatformManager/PlatformManager/Endpoints/LcmOpOccEndpoints.cs`
+> - `src/PlatformManager/PlatformManager/Endpoints/PlatformConfigEndpoints.cs`
+> - `src/PlatformManager/PlatformManager/Program.cs`

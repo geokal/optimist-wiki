@@ -1,16 +1,5 @@
 # Registry Authority Validation and Mirror Endpoints
 
-<cite>
-**Referenced Files in This Document**
-- `src/VimAdapter/src/utils/registry.py`
-- `src/VimAdapter/src/utils/validation.py`
-- `src/VimAdapter/src/clients/oci_client.py`
-- `src/VimAdapter/tests/test_validation.py`
-- `src/VimAdapter/tests/test_oci_client.py`
-- `src/VimAdapter/README.md`
-- `docs/CONFIGURATION.md`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -616,3 +605,13 @@ Operational best practices are:
 - Avoid combining Basic and Bearer credentials.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `src/VimAdapter/src/utils/registry.py`
+> - `src/VimAdapter/src/utils/validation.py`
+> - `src/VimAdapter/src/clients/oci_client.py`
+> - `src/VimAdapter/tests/test_validation.py`
+> - `src/VimAdapter/tests/test_oci_client.py`
+> - `src/VimAdapter/README.md`
+> - `docs/CONFIGURATION.md`

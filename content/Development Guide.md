@@ -1,18 +1,5 @@
 # Development Guide
 
-<cite>
-**Referenced Files in This Document**   
-- `docs/DEVELOPMENT.md`
-- `docs/TESTING.md`
-- `Tiltfile`
-- `.github/workflows/ci.yml`
-- `.github/workflows/cd.yml`
-- `.github/workflows/e2e.yml`
-- `.github/workflows/rollback.yml`
-- `src/ApmApi/.editorconfig`
-- `src/Catalogue/.editorconfig`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -603,3 +590,15 @@ flowchart TD
 
 ## Conclusion
 This Development Guide consolidates the repository’s expectations for local development, code style, branching, pull requests, testing, CI/CD, and release management. Contributors should treat the .NET 8 SDK, PostgreSQL, Python 3.11, Docker Compose, Helm, and GitHub Actions as the baseline environment. Changes should respect ETSI specifications, repository architectural patterns, automated quality gates, and the GitOps-based deployment model. When introducing new features, add tests, update documentation, and follow the pull request process so that CI, security scans, and reviewers can evaluate the change safely.
+
+> **Referenced Files in This Document**
+>
+> - `docs/DEVELOPMENT.md`
+> - `docs/TESTING.md`
+> - `Tiltfile`
+> - `.github/workflows/ci.yml`
+> - `.github/workflows/cd.yml`
+> - `.github/workflows/e2e.yml`
+> - `.github/workflows/rollback.yml`
+> - `src/ApmApi/.editorconfig`
+> - `src/Catalogue/.editorconfig`

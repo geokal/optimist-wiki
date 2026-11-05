@@ -1,16 +1,5 @@
 # Temporal Workflow Definitions
 
-<cite>
-**Referenced Files in This Document**
-- `src/Meao/Program.cs`
-- `src/Meao/Workflows/CreateAppInstWF.cs`
-- `src/Meao/Workflows/InstantiateAppInstWF.cs`
-- `src/Meao/Workflows/TerminateAppinstWF.cs`
-- `src/Meao/Workflows/OnboardAppPkgWF.cs`
-- `src/Meao/Workflows/Policies/ActivityPolicies.cs`
-- `src/Meao/Infrastructure/TemporalWorkflowExceptionHandler.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -519,3 +508,13 @@ The Meao service models application package onboarding and application instance 
 - `OnboardAppPkgWF` is a compensated saga that evolved from synchronous parsing and legacy cataloguing to a durable async path with catalogue inventory ownership.
 
 External service coordination is isolated behind activities, retries and timeouts are centralized in `ActivityPolicies`, and versioning is handled through Temporal patching. This design prioritizes determinism, recoverability, observability, and clear separation between orchestration logic and side-effecting operations.
+
+> **Referenced Files in This Document**
+>
+> - `src/Meao/Program.cs`
+> - `src/Meao/Workflows/CreateAppInstWF.cs`
+> - `src/Meao/Workflows/InstantiateAppInstWF.cs`
+> - `src/Meao/Workflows/TerminateAppinstWF.cs`
+> - `src/Meao/Workflows/OnboardAppPkgWF.cs`
+> - `src/Meao/Workflows/Policies/ActivityPolicies.cs`
+> - `src/Meao/Infrastructure/TemporalWorkflowExceptionHandler.cs`

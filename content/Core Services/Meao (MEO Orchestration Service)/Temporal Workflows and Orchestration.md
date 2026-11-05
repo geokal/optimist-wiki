@@ -1,24 +1,5 @@
 # Temporal Workflows and Orchestration
 
-<cite>
-**Referenced Files in This Document**
-- `src/Meao/Workflows/InstantiateAppInstWF.cs`
-- `src/Meao/Workflows/CreateAppInstWF.cs`
-- `src/Meao/Program.cs`
-- `src/Meao/Endpoints/AppInstanceEndpoints.cs`
-- `src/Meao/Services/MeaoService.cs`
-- `src/Meao/Services/IMeaoService.cs`
-- `src/Meao/Services/ILcmOpOccSignalDispatcher.cs`
-- `src/Meao/Services/LcmOpOccCallbackHandler.cs`
-- `src/Meao/Models/LcmOpOccSignal.cs`
-- `src/Meao.Tests.Unit/InstantiateAppInstWFTests.cs`
-- `src/Meao.Tests.Unit/InstantiateAppInstWFPhaseBTests.cs`
-- `src/Meao.Tests.Unit/Replay/WorkflowReplayTests.cs`
-- `src/Meao.Tests.Unit/TestAssets/WorkflowHistories/instantiate-poll-to-completion.json`
-- `src/Meao.Tests.Unit/Workflows/ActivityPolicyCoverageTests.cs`
-- `docs/ADR/0006-temporal-orchestration-engine.md`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -456,3 +437,21 @@ The most important operational properties are:
 Future refactorings could split this workflow into phase-specific child workflows, but any such change must preserve idempotency, determinism, and compensation semantics.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `src/Meao/Workflows/InstantiateAppInstWF.cs`
+> - `src/Meao/Workflows/CreateAppInstWF.cs`
+> - `src/Meao/Program.cs`
+> - `src/Meao/Endpoints/AppInstanceEndpoints.cs`
+> - `src/Meao/Services/MeaoService.cs`
+> - `src/Meao/Services/IMeaoService.cs`
+> - `src/Meao/Services/ILcmOpOccSignalDispatcher.cs`
+> - `src/Meao/Services/LcmOpOccCallbackHandler.cs`
+> - `src/Meao/Models/LcmOpOccSignal.cs`
+> - `src/Meao.Tests.Unit/InstantiateAppInstWFTests.cs`
+> - `src/Meao.Tests.Unit/InstantiateAppInstWFPhaseBTests.cs`
+> - `src/Meao.Tests.Unit/Replay/WorkflowReplayTests.cs`
+> - `src/Meao.Tests.Unit/TestAssets/WorkflowHistories/instantiate-poll-to-completion.json`
+> - `src/Meao.Tests.Unit/Workflows/ActivityPolicyCoverageTests.cs`
+> - `docs/ADR/0006-temporal-orchestration-engine.md`

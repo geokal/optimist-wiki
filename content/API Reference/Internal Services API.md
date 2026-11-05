@@ -1,16 +1,5 @@
 # Internal Services API
 
-<cite>
-**Referenced Files in This Document**   
-- `src/Catalogue/Endpoints/MecHostEndpoints.cs`
-- `src/Catalogue/Endpoints/AppInstanceEndpoints.cs`
-- `src/Catalogue/Endpoints/MepmEndpoints.cs`
-- `src/Catalogue/Endpoints/TopologyEndpoints.cs`
-- `src/Meao/Endpoints/AppInstanceInfoEndpoints.cs`
-- `src/Meao/Endpoints/SubscriptionEndpoints.cs`
-- `src/Meao/Endpoints/AppInstanceEndpoints.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -504,3 +493,13 @@ For callers integrating with these internal services:
 - Treat asynchronous lifecycle responses as accepted work items and poll or subscribe via callbacks for final state.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `src/Catalogue/Endpoints/MecHostEndpoints.cs`
+> - `src/Catalogue/Endpoints/AppInstanceEndpoints.cs`
+> - `src/Catalogue/Endpoints/MepmEndpoints.cs`
+> - `src/Catalogue/Endpoints/TopologyEndpoints.cs`
+> - `src/Meao/Endpoints/AppInstanceInfoEndpoints.cs`
+> - `src/Meao/Endpoints/SubscriptionEndpoints.cs`
+> - `src/Meao/Endpoints/AppInstanceEndpoints.cs`

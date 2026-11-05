@@ -14,6 +14,9 @@ ROOT = Path(__file__).resolve().parents[1]
 CONTENT_ROOT = ROOT / "content"
 METADATA_PATH = ROOT / "meta" / "repowiki-metadata.json"
 SOURCE_LINK_PATTERN = re.compile(r"\[([^\]]+)\]\(file://([^\s)]+)\)")
+REFERENCE_BLOCK_PATTERN = re.compile(
+    r"(?m)^<cite>\s*\n(?P<body>.*?)^</cite>\s*(?:\n|$)", re.DOTALL
+)
 
 
 def filesystem_name(name: str) -> str:
@@ -153,12 +156,42 @@ def repair_source_links() -> int:
     return replacements
 
 
+def format_reference_sections() -> int:
+    """Move Qoder's reference block to a portable Markdown footer."""
+    changed = 0
+    for markdown_path in CONTENT_ROOT.rglob("*.md"):
+        original = markdown_path.read_text(encoding="utf-8")
+        matches = list(REFERENCE_BLOCK_PATTERN.finditer(original))
+        if not matches:
+            continue
+        if len(matches) != 1 or "Referenced Files in This Document" not in matches[0]["body"]:
+            raise ValueError(f"Unexpected cite block in {markdown_path}; review it manually.")
+        match = matches[0]
+        lines = match["body"].strip().splitlines()
+        if not lines[0].strip().startswith("**Referenced Files in This Document**"):
+            raise ValueError(f"Unexpected reference heading in {markdown_path}; review it manually.")
+        items = [line.rstrip() for line in lines[1:] if line.strip()]
+        if any(not line.lstrip().startswith("- ") for line in items):
+            raise ValueError(f"Unexpected reference item in {markdown_path}; review it manually.")
+        content = (original[:match.start()] + original[match.end():]).rstrip()
+        footer = ["> **Referenced Files in This Document**", ">"]
+        footer.extend("> " + line.lstrip() for line in items)
+        markdown_path.write_text(content + "\n\n" + "\n".join(footer) + "\n", encoding="utf-8")
+        changed += 1
+    return changed
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--repair-source-links",
         action="store_true",
         help="Convert unavailable file:// source links into visible source paths.",
+    )
+    parser.add_argument(
+        "--format-references",
+        action="store_true",
+        help="Move Qoder reference lists to Markdown footers in content files.",
     )
     args = parser.parse_args()
 
@@ -178,6 +211,8 @@ def main() -> None:
 
     if args.repair_source_links:
         print(f"Repaired {repair_source_links()} unavailable source links.")
+    if args.format_references:
+        print(f"Formatted reference sections in {format_reference_sections()} pages.")
     print(f"Generated navigation for {len(catalogs)} wiki pages.")
 
 

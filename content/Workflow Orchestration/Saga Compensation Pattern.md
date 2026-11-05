@@ -1,17 +1,5 @@
 # Saga Compensation Pattern
 
-<cite>
-**Referenced Files in This Document**
-- `src/Meao/Workflows/InstantiateAppInstWF.cs`
-- `src/Meao/Workflows/TerminateAppinstWF.cs`
-- `src/Meao/Workflows/Policies/ActivityPolicies.cs`
-- `src/Meao/Workflows/Common/HybridSignalPollHelper.cs`
-- `src/PlatformManager/PlatformManager/Models/AppInstanceLcmOpOcc.cs`
-- `src/PlatformManager/PlatformManager/Endpoints/LcmOpOccEndpoints.cs`
-- `src/PlatformManager/PlatformManager/Services/LifecycleStateMachine.cs`
-- `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -500,3 +488,14 @@ Consistency caveats:
 The saga compensation pattern in this system is centered on Temporal workflows coordinating external lifecycle services. `InstantiateAppInstWF` implements forward progress with compensation for grant allocation, placement selection, MEPM instantiation, and catalog registration. `TerminateAppinstWF` implements reverse compensation for capacity release and catalog cleanup. MEPM’s `AppInstanceLcmOpOcc` provides durable, observable, and manually recoverable lifecycle operation state.
 
 The most important operational principle is that compensation is reliable but not infallible. Systems should monitor failed operation occurrences, stalled workflows, inconsistent catalogue or placement state, and unresolved grants. When compensation fails, manual intervention should reconcile external state before retrying higher-level operations.
+
+> **Referenced Files in This Document**
+>
+> - `src/Meao/Workflows/InstantiateAppInstWF.cs`
+> - `src/Meao/Workflows/TerminateAppinstWF.cs`
+> - `src/Meao/Workflows/Policies/ActivityPolicies.cs`
+> - `src/Meao/Workflows/Common/HybridSignalPollHelper.cs`
+> - `src/PlatformManager/PlatformManager/Models/AppInstanceLcmOpOcc.cs`
+> - `src/PlatformManager/PlatformManager/Endpoints/LcmOpOccEndpoints.cs`
+> - `src/PlatformManager/PlatformManager/Services/LifecycleStateMachine.cs`
+> - `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`

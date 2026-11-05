@@ -1,25 +1,5 @@
 # Subscription and Notification Management
 
-<cite>
-**Referenced Files in This Document**
-- `src/ApmApi/Endpoints/ApmEndpoints.cs`
-- `src/ApmApi/Utils/WebhookNotifyService.cs`
-- `src/ApmApi/Services/SubscriptionsService.cs`
-- `src/ApmApi/Services/ISubscriptionsService.cs`
-- `src/ApmApi/Background/AppDBackgroundWorker.cs`
-- `src/ApmApi/Program.cs`
-- `src/ApmApi/Dto/AppPkgSubscriptionDto.cs`
-- `src/ApmApi/Dto/AppPkgSubscriptionInfoDto.cs`
-- `src/ApmApi/Dto/AppPkgNotificationDto.cs`
-- `src/ApmApi/Models/AppPkgSubscription.cs`
-- `src/ApmApi/Models/AppPkgSubscriptionFilter.cs`
-- `src/ApmApi/Repositories/impl/SubscriptionRepository.cs`
-- `src/ApmApi/Repositories/ISubscriptionRepository.cs`
-- `src/ApmApi/Validators/AppPkgSubscriptionDtoValidator.cs`
-- `docs/ADR/0059-etsi-subscription-callback-authentication-and-prefix-hardening.md`
-- `docs/ADR/0026-callback-uri-dns-rebinding-hardening.md`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -545,3 +525,22 @@ To strengthen reliability further, teams may consider:
 - Introducing a per-subscription retry policy and visibility store for failed deliveries.
 - Extending metrics and tracing around webhook delivery outcomes.
 - Centralizing callback URI validation and pinned HTTP dialing into a shared helper to reduce duplication.
+
+> **Referenced Files in This Document**
+>
+> - `src/ApmApi/Endpoints/ApmEndpoints.cs`
+> - `src/ApmApi/Utils/WebhookNotifyService.cs`
+> - `src/ApmApi/Services/SubscriptionsService.cs`
+> - `src/ApmApi/Services/ISubscriptionsService.cs`
+> - `src/ApmApi/Background/AppDBackgroundWorker.cs`
+> - `src/ApmApi/Program.cs`
+> - `src/ApmApi/Dto/AppPkgSubscriptionDto.cs`
+> - `src/ApmApi/Dto/AppPkgSubscriptionInfoDto.cs`
+> - `src/ApmApi/Dto/AppPkgNotificationDto.cs`
+> - `src/ApmApi/Models/AppPkgSubscription.cs`
+> - `src/ApmApi/Models/AppPkgSubscriptionFilter.cs`
+> - `src/ApmApi/Repositories/impl/SubscriptionRepository.cs`
+> - `src/ApmApi/Repositories/ISubscriptionRepository.cs`
+> - `src/ApmApi/Validators/AppPkgSubscriptionDtoValidator.cs`
+> - `docs/ADR/0059-etsi-subscription-callback-authentication-and-prefix-hardening.md`
+> - `docs/ADR/0026-callback-uri-dns-rebinding-hardening.md`

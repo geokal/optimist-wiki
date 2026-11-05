@@ -1,19 +1,5 @@
 # REST API Endpoints (/app_pkgm/v1)
 
-<cite>
-**Referenced Files in This Document**
-- `docs/ETSI_SPECS/MEC01002_AppPkgMgmt.yaml`
-- `src/ApmApi/Endpoints/ApmEndpoints.cs`
-- `src/ApmApi/Program.cs`
-- `src/ApmApi/Services/AppPackageService.cs`
-- `src/ApmApi/Requests/CreateAppPkg.cs`
-- `src/ApmApi/Dto/AppPkgInfoDto.cs`
-- `src/ApmApi/ApmApi.http`
-- `docs/ADR/0025-rfc7807-structured-error-model.md`
-- `docs/ADR/0046-universal-rfc7807-exception-handling-and-fluentvalidation.md`
-- `docs/ADR/0059-etsi-subscription-callback-authentication-and-prefix-hardening.md`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -679,3 +665,16 @@ The project adopts RFC 7807 Problem Details across services. Validation failures
 
 ## Conclusion
 The `/app_pkgm/v1` API provides a practical implementation of ETSI GS MEC 010-2 Part 2 app package management. It separates lightweight HTTP operations from heavy CSAR processing by using a staged upload model and durable background workflows. Authentication is enforced, errors are structured, and callback subscriptions include hardened validation. Clients should treat package creation and content upload as two distinct phases and rely on the returned `stagingId` and `digest` for auditability and recovery.
+
+> **Referenced Files in This Document**
+>
+> - `docs/ETSI_SPECS/MEC01002_AppPkgMgmt.yaml`
+> - `src/ApmApi/Endpoints/ApmEndpoints.cs`
+> - `src/ApmApi/Program.cs`
+> - `src/ApmApi/Services/AppPackageService.cs`
+> - `src/ApmApi/Requests/CreateAppPkg.cs`
+> - `src/ApmApi/Dto/AppPkgInfoDto.cs`
+> - `src/ApmApi/ApmApi.http`
+> - `docs/ADR/0025-rfc7807-structured-error-model.md`
+> - `docs/ADR/0046-universal-rfc7807-exception-handling-and-fluentvalidation.md`
+> - `docs/ADR/0059-etsi-subscription-callback-authentication-and-prefix-hardening.md`

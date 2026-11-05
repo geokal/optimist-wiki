@@ -25,10 +25,10 @@ The workflow runs on pushes to `main` and can also be started manually. If your 
 2. From the repository root, generate the index and sidebar:
 
    ```powershell
-   uv run --no-project python tools/generate_wiki_navigation.py
+   uv run --no-project python tools/generate_wiki_navigation.py --format-references
    ```
 
-   This rewrites `README.md` and `_sidebar.md`. The generator reports metadata pages it cannot find; resolve those mappings before publishing. To convert Qoder's `file://` source links to non-clickable paths, add `--repair-source-links`. This rewrites Markdown files, so review or back up the export first; if the original source is public, a link rewrite to that repository may be preferable.
+   This rewrites `README.md` and `_sidebar.md`; `--format-references` also moves each Qoder reference list to the end of its Markdown page. The generator reports metadata pages it cannot find; resolve those mappings before publishing. To convert Qoder's `file://` source links to non-clickable paths, also add `--repair-source-links`. Both options rewrite Markdown files, so review or back up the export first; if the original source is public, a link rewrite to that repository may be preferable.
 3. If the Architecture Overview Mermaid source changed, regenerate its special Qoder-rendered SVG using [the diagram instructions](tools/README.md). Its source hash prevents a stale diagram being shown. If the definition did not change, the existing SVG remains valid.
 4. Preview locally:
 

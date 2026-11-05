@@ -1,21 +1,5 @@
 # VIM gRPC Client Service
 
-<cite>
-**Referenced Files in This Document**
-- `src/PlatformManager/PlatformManager/Services/AppInstanceService.cs`
-- `src/PlatformManager/PlatformManager/Services/IAppInstanceService.cs`
-- `src/PlatformManager/PlatformManager/Models/ApiResponses.cs`
-- `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
-- `src/PlatformManager/PlatformManager/Services/PluginAdapter/PluginFactory.cs`
-- `src/PlatformManager/PlatformManager/Services/PluginAdapter/GrpcFactory.cs`
-- `src/PlatformManager/PlatformManager/Services/PluginAdapter/IGrpcClient.cs`
-- `src/PlatformManager/PlatformManager/Services/PluginAdapter/GrpcClient.cs`
-- `src/PlatformManager/PlatformManager/Program.cs`
-- `src/PlatformManager/PlatformManager/Models/AppPkgRecord.cs`
-- `src/PlatformManager/PlatformManager.Tests.Integration/AppInstanceServiceForwardingTests.cs`
-- `src/PlatformManager/PlatformManager.Tests.Integration/LcmWorkerServiceCsarDigestTests.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -495,3 +479,18 @@ AppInstanceService is the thin, typed bridge between the Platform Manager’s li
 3. **Structured error handling**: convert VIM-reported failures and transport errors into clear exceptions that `LcmWorkerService` can settle into durable lifecycle state.
 
 Its relationship with `LcmWorkerService` is clean: the worker owns orchestration, durability, and state transitions; AppInstanceService owns the concrete VIM call. This separation makes k8s and OpenStack adapters interchangeable, supports extension through the factory pattern, and keeps gRPC details away from the higher-level lifecycle logic.
+
+> **Referenced Files in This Document**
+>
+> - `src/PlatformManager/PlatformManager/Services/AppInstanceService.cs`
+> - `src/PlatformManager/PlatformManager/Services/IAppInstanceService.cs`
+> - `src/PlatformManager/PlatformManager/Models/ApiResponses.cs`
+> - `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
+> - `src/PlatformManager/PlatformManager/Services/PluginAdapter/PluginFactory.cs`
+> - `src/PlatformManager/PlatformManager/Services/PluginAdapter/GrpcFactory.cs`
+> - `src/PlatformManager/PlatformManager/Services/PluginAdapter/IGrpcClient.cs`
+> - `src/PlatformManager/PlatformManager/Services/PluginAdapter/GrpcClient.cs`
+> - `src/PlatformManager/PlatformManager/Program.cs`
+> - `src/PlatformManager/PlatformManager/Models/AppPkgRecord.cs`
+> - `src/PlatformManager/PlatformManager.Tests.Integration/AppInstanceServiceForwardingTests.cs`
+> - `src/PlatformManager/PlatformManager.Tests.Integration/LcmWorkerServiceCsarDigestTests.cs`

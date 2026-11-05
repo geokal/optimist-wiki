@@ -1,23 +1,5 @@
 # ETSI App Package Management API
 
-<cite>
-**Referenced Files in This Document**   
-- `src/ApmApi/Endpoints/ApmEndpoints.cs`
-- `src/ApmApi/Validators/CreateAppPkgValidator.cs`
-- `src/ApmApi/Validators/AppPkgSubscriptionDtoValidator.cs`
-- `src/ApmApi/Services/IAppPackageService.cs`
-- `src/ApmApi/Services/AppPackageService.cs`
-- `src/ApmApi/Services/ISubscriptionsService.cs`
-- `src/ApmApi/Services/SubscriptionsService.cs`
-- `src/ApmApi/Services/IOnboardedPackageStore.cs`
-- `src/ApmApi/Program.cs`
-- `src/ApmApi/appsettings.json`
-- `src/ApmApi/ApmApi.Tests/Integration/ApmValidationIntegrationTests.cs`
-- `src/ApmApi/ApmApi.Tests/Integration/EndpointModernizationIntegrationTests.cs`
-- `src/ApmApi/ApmApi.Tests/Integration/SubscriptionIntegrationTests.cs`
-- `docs/ETSI_SPECS/MEC01002_AppPkgMgmt.yaml`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -665,3 +647,20 @@ Error responses generally follow RFC 7807 `ProblemDetails` semantics, including 
 The ETSI App Package Management API provides a robust, two-phase onboarding flow backed by durable workflows, strict CSAR validation, and rich descriptor inspection capabilities. Clients should create a package record, upload exactly one valid CSAR, and then consume package details, entry definitions, AppD descriptors, and image information as needed. Subscription endpoints enable asynchronous lifecycle monitoring. Proper authentication, content-type handling, and error interpretation are essential for reliable integration.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `src/ApmApi/Endpoints/ApmEndpoints.cs`
+> - `src/ApmApi/Validators/CreateAppPkgValidator.cs`
+> - `src/ApmApi/Validators/AppPkgSubscriptionDtoValidator.cs`
+> - `src/ApmApi/Services/IAppPackageService.cs`
+> - `src/ApmApi/Services/AppPackageService.cs`
+> - `src/ApmApi/Services/ISubscriptionsService.cs`
+> - `src/ApmApi/Services/SubscriptionsService.cs`
+> - `src/ApmApi/Services/IOnboardedPackageStore.cs`
+> - `src/ApmApi/Program.cs`
+> - `src/ApmApi/appsettings.json`
+> - `src/ApmApi/ApmApi.Tests/Integration/ApmValidationIntegrationTests.cs`
+> - `src/ApmApi/ApmApi.Tests/Integration/EndpointModernizationIntegrationTests.cs`
+> - `src/ApmApi/ApmApi.Tests/Integration/SubscriptionIntegrationTests.cs`
+> - `docs/ETSI_SPECS/MEC01002_AppPkgMgmt.yaml`

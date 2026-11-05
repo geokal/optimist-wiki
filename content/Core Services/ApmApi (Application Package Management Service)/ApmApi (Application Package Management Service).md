@@ -1,25 +1,5 @@
 # ApmApi (Application Package Management Service)
 
-<cite>
-**Referenced Files in This Document**   
-- `src/ApmApi/Program.cs`
-- `src/ApmApi/README.md`
-- `src/ApmApi/Endpoints/ApmEndpoints.cs`
-- `src/ApmApi/Services/AppPackageService.cs`
-- `src/ApmApi/Services/IAppPackageService.cs`
-- `src/ApmApi/Services/SubscriptionsService.cs`
-- `src/ApmApi/Services/ISubscriptionsService.cs`
-- `src/ApmApi/Services/PackageValidator.cs`
-- `src/ApmApi/Services/AppDDeserializerService.cs`
-- `src/ApmApi/Services/ICsarStagingStore.cs`
-- `src/ApmApi/Services/FileSystemCsarStagingStore.cs`
-- `src/ApmApi/Services/IOnboardedPackageStore.cs`
-- `src/ApmApi/Services/FileSystemOnboardedPackageStore.cs`
-- `src/ApmApi/Background/AppDBackgroundWorker.cs`
-- `src/ApmApi/Background/AppDProcessingQueue.cs`
-- `src/ApmApi/Background/AppDProcessingJob.cs`
-</cite>
-
 ## Table of Contents
 1. Introduction
 2. Project Structure
@@ -532,3 +512,22 @@ Security and integrity considerations:
 
 ## Conclusion
 ApmApi provides a robust, standards-aligned foundation for managing MEC application packages. Its layered design separates upload transport, validation, descriptor parsing, durable storage, and distribution concerns. The claim-check pattern, bounded processing, Temporal workflows, and background worker together ensure large CSARs are handled safely and reliably. For operators, the most important controls are upload limits, checksum verification, artifact durability, authentication, and monitoring of Temporal and background processing pipelines.
+
+> **Referenced Files in This Document**
+>
+> - `src/ApmApi/Program.cs`
+> - `src/ApmApi/README.md`
+> - `src/ApmApi/Endpoints/ApmEndpoints.cs`
+> - `src/ApmApi/Services/AppPackageService.cs`
+> - `src/ApmApi/Services/IAppPackageService.cs`
+> - `src/ApmApi/Services/SubscriptionsService.cs`
+> - `src/ApmApi/Services/ISubscriptionsService.cs`
+> - `src/ApmApi/Services/PackageValidator.cs`
+> - `src/ApmApi/Services/AppDDeserializerService.cs`
+> - `src/ApmApi/Services/ICsarStagingStore.cs`
+> - `src/ApmApi/Services/FileSystemCsarStagingStore.cs`
+> - `src/ApmApi/Services/IOnboardedPackageStore.cs`
+> - `src/ApmApi/Services/FileSystemOnboardedPackageStore.cs`
+> - `src/ApmApi/Background/AppDBackgroundWorker.cs`
+> - `src/ApmApi/Background/AppDProcessingQueue.cs`
+> - `src/ApmApi/Background/AppDProcessingJob.cs`

@@ -1,20 +1,5 @@
 # Package Distribution and CSAR Pre-Staging
 
-<cite>
-**Referenced Files in This Document**   
-- `docs/ADR/0041-oci-zot-oras-csar-distribution.md`
-- `src/PlatformManager/PlatformManager/Services/OrasDistributionClient.cs`
-- `src/PlatformManager/PlatformManager/Services/IOciDistributionClient.cs`
-- `src/PlatformManager/PlatformManager/Services/PackageService.cs`
-- `src/PlatformManager/PlatformManager/Services/IPackageService.cs`
-- `src/PlatformManager/PlatformManager/Services/CsarPreStageSubscriber.cs`
-- `src/PlatformManager/PlatformManager/Services/AppInstanceService.cs`
-- `src/PlatformManager/PlatformManager/Services/IAppInstanceService.cs`
-- `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
-- `src/PlatformManager/PlatformManager/Program.cs`
-- `src/PlatformManager/PlatformManager/Models/AppPkgRecord.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -575,3 +560,17 @@ ADR-0041 shifts CSAR distribution from in-process byte streaming to content-addr
 Together, these components reduce memory pressure, introduce content addressing, preserve ETSI-aligned pull semantics, and leave room for monitoring, retries, and future registry expansion while keeping the legacy fallbacks safe for older data.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `docs/ADR/0041-oci-zot-oras-csar-distribution.md`
+> - `src/PlatformManager/PlatformManager/Services/OrasDistributionClient.cs`
+> - `src/PlatformManager/PlatformManager/Services/IOciDistributionClient.cs`
+> - `src/PlatformManager/PlatformManager/Services/PackageService.cs`
+> - `src/PlatformManager/PlatformManager/Services/IPackageService.cs`
+> - `src/PlatformManager/PlatformManager/Services/CsarPreStageSubscriber.cs`
+> - `src/PlatformManager/PlatformManager/Services/AppInstanceService.cs`
+> - `src/PlatformManager/PlatformManager/Services/IAppInstanceService.cs`
+> - `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
+> - `src/PlatformManager/PlatformManager/Program.cs`
+> - `src/PlatformManager/PlatformManager/Models/AppPkgRecord.cs`

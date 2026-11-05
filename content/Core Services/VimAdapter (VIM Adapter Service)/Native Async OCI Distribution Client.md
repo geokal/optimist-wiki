@@ -1,20 +1,5 @@
 # Native Async OCI Distribution Client
 
-<cite>
-**Referenced Files in This Document**   
-- `src/VimAdapter/src/clients/oci_client.py`
-- `src/VimAdapter/src/utils/registry.py`
-- `src/VimAdapter/src/utils/validation.py`
-- `src/VimAdapter/src/adapters/base.py`
-- `src/VimAdapter/src/adapters/helm/helm_adapter.py`
-- `src/VimAdapter/src/server/lcm_grpc_server.py`
-- `src/VimAdapter/tests/test_oci_client.py`
-- `.planning/phases/50-vimadapter-native-async-oci-distribution-client/50-CONTEXT.md`
-- `.planning/phases/50-vimadapter-native-async-oci-distribution-client/50-PLAN-REVIEW.md`
-- `.planning/phases/50-vimadapter-native-async-oci-distribution-client/50-SECURITY.md`
-- `.planning/phases/50-vimadapter-native-async-oci-distribution-client/50-VERIFICATION.md`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -404,3 +389,17 @@ Known limitations remain documented rather than silently hidden: there is no dow
 - `.planning/phases/50-vimadapter-native-async-oci-distribution-client/50-CONTEXT.md#L1-L56`
 - `.planning/phases/50-vimadapter-native-async-oci-distribution-client/50-SECURITY.md#L1-L93`
 - `.planning/phases/50-vimadapter-native-async-oci-distribution-client/50-VERIFICATION.md#L1-L151`
+
+> **Referenced Files in This Document**
+>
+> - `src/VimAdapter/src/clients/oci_client.py`
+> - `src/VimAdapter/src/utils/registry.py`
+> - `src/VimAdapter/src/utils/validation.py`
+> - `src/VimAdapter/src/adapters/base.py`
+> - `src/VimAdapter/src/adapters/helm/helm_adapter.py`
+> - `src/VimAdapter/src/server/lcm_grpc_server.py`
+> - `src/VimAdapter/tests/test_oci_client.py`
+> - `.planning/phases/50-vimadapter-native-async-oci-distribution-client/50-CONTEXT.md`
+> - `.planning/phases/50-vimadapter-native-async-oci-distribution-client/50-PLAN-REVIEW.md`
+> - `.planning/phases/50-vimadapter-native-async-oci-distribution-client/50-SECURITY.md`
+> - `.planning/phases/50-vimadapter-native-async-oci-distribution-client/50-VERIFICATION.md`

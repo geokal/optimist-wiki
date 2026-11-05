@@ -1,30 +1,5 @@
 # VimAdapter (VIM Adapter Service)
 
-<cite>
-**Referenced Files in This Document**   
-- `src/VimAdapter/README.md`
-- `src/VimAdapter/main.py`
-- `src/VimAdapter/src/server/lcm_grpc_server.py`
-- `src/VimAdapter/src/adapters/base.py`
-- `src/VimAdapter/src/adapters/factory.py`
-- `src/VimAdapter/src/adapters/helm/helm_adapter.py`
-- `src/VimAdapter/src/adapters/helm/helm_client.py`
-- `src/VimAdapter/src/adapters/openstack/openstack_adapter.py`
-- `src/VimAdapter/src/clients/k8s_client.py`
-- `src/VimAdapter/src/clients/oci_client.py`
-- `src/VimAdapter/src/utils/registry.py`
-- `src/VimAdapter/src/utils/config_store.py`
-- `src/VimAdapter/src/utils/validation.py`
-- `src/VimAdapter/src/utils/fs.py`
-- `src/VimAdapter/src/utils/infrastructure_lookup.py`
-- `src/VimAdapter/src/utils/csar_manifest.py`
-- `src/VimAdapter/src/services/nova_service.py`
-- `src/VimAdapter/src/services/glance_service.py`
-- `src/VimAdapter/src/services/neutron_service.py`
-- `src/VimAdapter/src/services/keystone_service.py`
-- `src/VimAdapter/protos/lcmservice.proto`
-</cite>
-
 ## Update Summary
 **Changes Made**   
 - Replaced external `oras` CLI subprocess with native asynchronous OCI distribution client (`OciDistributionClient`)
@@ -708,3 +683,27 @@ For future extensions, the recommended approach is to implement the `VimAdapter`
 - **Cleanup tests**: Assert that termination removes tracked resources or leaves deterministic partial-failure state.
 - **Regression tests**: Cover documented failure modes such as missing CSAR, invalid OCI ref, and absent SDK dependencies.
 - **OCI client tests**: Validate registry authority validation, credential handling, and streaming behavior.
+
+> **Referenced Files in This Document**
+>
+> - `src/VimAdapter/README.md`
+> - `src/VimAdapter/main.py`
+> - `src/VimAdapter/src/server/lcm_grpc_server.py`
+> - `src/VimAdapter/src/adapters/base.py`
+> - `src/VimAdapter/src/adapters/factory.py`
+> - `src/VimAdapter/src/adapters/helm/helm_adapter.py`
+> - `src/VimAdapter/src/adapters/helm/helm_client.py`
+> - `src/VimAdapter/src/adapters/openstack/openstack_adapter.py`
+> - `src/VimAdapter/src/clients/k8s_client.py`
+> - `src/VimAdapter/src/clients/oci_client.py`
+> - `src/VimAdapter/src/utils/registry.py`
+> - `src/VimAdapter/src/utils/config_store.py`
+> - `src/VimAdapter/src/utils/validation.py`
+> - `src/VimAdapter/src/utils/fs.py`
+> - `src/VimAdapter/src/utils/infrastructure_lookup.py`
+> - `src/VimAdapter/src/utils/csar_manifest.py`
+> - `src/VimAdapter/src/services/nova_service.py`
+> - `src/VimAdapter/src/services/glance_service.py`
+> - `src/VimAdapter/src/services/neutron_service.py`
+> - `src/VimAdapter/src/services/keystone_service.py`
+> - `src/VimAdapter/protos/lcmservice.proto`

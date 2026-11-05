@@ -1,24 +1,5 @@
 # Core Services
 
-<cite>
-**Referenced Files in This Document**
-- `src/Meao/Program.cs`
-- `src/Meao/appsettings.json`
-- `src/Meao/Endpoints/AppInstanceEndpoints.cs`
-- `src/ApmApi/Program.cs`
-- `src/ApmApi/Endpoints/ApmEndpoints.cs`
-- `src/ApmApi/appsettings.json`
-- `src/Catalogue/Program.cs`
-- `src/Catalogue/Endpoints/MepmEndpoints.cs`
-- `src/Catalogue/Endpoints/MecHostEndpoints.cs`
-- `src/Catalogue/appsettings.json`
-- `src/PlatformManager/PlatformManager/Program.cs`
-- `src/PlatformManager/PlatformManager/Endpoints/LcmEndpoint.cs`
-- `src/VimAdapter/main.py`
-- `docs/CONTEXT-MAP.md`
-- `docs/CONFIGURATION.md`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -466,3 +447,21 @@ Optimist.Orchestrator’s core services implement a clean separation between orc
 - **VimAdapter** is the infrastructure bridge: it converts gRPC lifecycle commands into concrete Kubernetes or OpenStack actions.
 
 Together, they implement the ETSI MEC roles through well-defined interfaces, consistent authentication, service discovery, structured error handling, and durable background processing. Operators should treat these services as coordinated components rather than independent microservices: successful application onboarding and instantiation depend on correct configuration, healthy databases, working service discovery, valid Keycloak tokens, and a responsive VimAdapter.
+
+> **Referenced Files in This Document**
+>
+> - `src/Meao/Program.cs`
+> - `src/Meao/appsettings.json`
+> - `src/Meao/Endpoints/AppInstanceEndpoints.cs`
+> - `src/ApmApi/Program.cs`
+> - `src/ApmApi/Endpoints/ApmEndpoints.cs`
+> - `src/ApmApi/appsettings.json`
+> - `src/Catalogue/Program.cs`
+> - `src/Catalogue/Endpoints/MepmEndpoints.cs`
+> - `src/Catalogue/Endpoints/MecHostEndpoints.cs`
+> - `src/Catalogue/appsettings.json`
+> - `src/PlatformManager/PlatformManager/Program.cs`
+> - `src/PlatformManager/PlatformManager/Endpoints/LcmEndpoint.cs`
+> - `src/VimAdapter/main.py`
+> - `docs/CONTEXT-MAP.md`
+> - `docs/CONFIGURATION.md`

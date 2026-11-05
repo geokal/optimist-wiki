@@ -1,27 +1,5 @@
 # Workflow Orchestration
 
-<cite>
-**Referenced Files in This Document**   
-- `docs/ADR/0006-temporal-orchestration-engine.md`
-- `docs/ADR/0053-mepm-lcm-op-occ-persisted-replay.md`
-- `docs/CSAR_DISTRIBUTION_AND_LIFECYCLE_ARCHITECTURE.md`
-- `src/Meao/Program.cs`
-- `src/Meao/Workflows/CreateAppInstWF.cs`
-- `src/Meao/Workflows/OnboardAppPkgWF.cs`
-- `src/Meao/Workflows/InstantiateAppInstWF.cs`
-- `src/Meao/Workflows/TerminateAppinstWF.cs`
-- `src/Meao/Workflows/Policies/ActivityPolicies.cs`
-- `src/Meao/Workflows/Common/HybridSignalPollHelper.cs`
-- `src/Meao/Infrastructure/TemporalWorkflowExceptionHandler.cs`
-- `src/Meao/Activities/CatalogueActivities.cs`
-- `src/Meao/Activities/ApmActivities.cs`
-- `src/Meao/Activities/MepmActivities.cs`
-- `src/Meao/Activities/AppInstanceActivities.cs`
-- `src/Meao/Activities/PlacementActivities.cs`
-- `src/Meao/Activities/AuthActivities.cs`
-- `src/Meao/Activities/GrantActivities.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -608,3 +586,24 @@ Operational reliability depends on:
 - Robust monitoring of workflow history, activity failures, and compensation outcomes.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `docs/ADR/0006-temporal-orchestration-engine.md`
+> - `docs/ADR/0053-mepm-lcm-op-occ-persisted-replay.md`
+> - `docs/CSAR_DISTRIBUTION_AND_LIFECYCLE_ARCHITECTURE.md`
+> - `src/Meao/Program.cs`
+> - `src/Meao/Workflows/CreateAppInstWF.cs`
+> - `src/Meao/Workflows/OnboardAppPkgWF.cs`
+> - `src/Meao/Workflows/InstantiateAppInstWF.cs`
+> - `src/Meao/Workflows/TerminateAppinstWF.cs`
+> - `src/Meao/Workflows/Policies/ActivityPolicies.cs`
+> - `src/Meao/Workflows/Common/HybridSignalPollHelper.cs`
+> - `src/Meao/Infrastructure/TemporalWorkflowExceptionHandler.cs`
+> - `src/Meao/Activities/CatalogueActivities.cs`
+> - `src/Meao/Activities/ApmActivities.cs`
+> - `src/Meao/Activities/MepmActivities.cs`
+> - `src/Meao/Activities/AppInstanceActivities.cs`
+> - `src/Meao/Activities/PlacementActivities.cs`
+> - `src/Meao/Activities/AuthActivities.cs`
+> - `src/Meao/Activities/GrantActivities.cs`

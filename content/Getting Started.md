@@ -1,19 +1,5 @@
 # Getting Started
 
-<cite>
-**Referenced Files in This Document**   
-- `README.md`
-- `docs/GETTING-STARTED.md`
-- `docker-compose.yml`
-- `docker-compose.infra.yml`
-- `docker-compose.override.yml`
-- `Tiltfile`
-- `build-images.sh`
-- `scripts/apisix_provision_routes.py`
-- `docker/apisix_conf/config.yaml`
-- `docker/apisix_conf/apisix-routes.yaml`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -614,3 +600,16 @@ Optimist.Orchestrator provides a complete ETSI MEC-compliant orchestrator stack 
 With Docker Compose, you can start the entire stack, upload a CSAR package, request a grant, create and instantiate an application instance, and observe the result. When things go wrong, start with ports, Consul, APISIX routes, Keycloak, Temporal, and PostgreSQL — those are the most common first-run failure points.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `README.md`
+> - `docs/GETTING-STARTED.md`
+> - `docker-compose.yml`
+> - `docker-compose.infra.yml`
+> - `docker-compose.override.yml`
+> - `Tiltfile`
+> - `build-images.sh`
+> - `scripts/apisix_provision_routes.py`
+> - `docker/apisix_conf/config.yaml`
+> - `docker/apisix_conf/apisix-routes.yaml`
