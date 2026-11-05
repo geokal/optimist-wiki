@@ -1,26 +1,5 @@
 # Testing Strategy
 
-<cite>
-**Referenced Files in This Document**
-- `docs/TESTING.md`
-- `docs/ADR/0037-postgresql-unification-and-testcontainers-strategy.md`
-- `docs/ADR/0044-shared-testcontainers-fixture-library.md`
-- `docs/ADR/0054-cross-service-e2e-harness.md`
-- `.github/workflows/ci.yml`
-- `.github/workflows/e2e.yml`
-- `src/Common/TestInfrastructure/PostgresTestDatabaseFixture.cs`
-- `tests/Optimist.Orchestrator.E2E/Fixtures/E2ESystemFixture.cs`
-- `tests/Optimist.Orchestrator.E2E/Fixtures/CrossServiceE2ECollection.cs`
-- `tests/Optimist.Orchestrator.E2E/Fixtures/MeaoApiFactory.cs`
-- `tests/Optimist.Orchestrator.E2E/Fixtures/VimAdapterFixture.cs`
-- `tests/Optimist.Orchestrator.E2E/Fixtures/RealVimE2ESystemFixture.cs`
-- `tests/Optimist.Orchestrator.E2E/FullLifecycleToVimBoundaryE2ETests.cs`
-- `src/Meao.Tests.Unit/ApmAndAuthActivitiesTests.cs`
-- `Benchmarks/Program.cs`
-- `Benchmarks/CsarPipelineBenchmarks.cs`
-- `Benchmarks/AppPackageUploadBenchmark.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -587,3 +566,23 @@ For CI:
 - `.github/workflows/ci.yml#L1-L146`
 - `.github/workflows/e2e.yml#L1-L96`
 - `docs/TESTING.md#L1-L200`
+
+> **Referenced Files in This Document**
+>
+> - `docs/TESTING.md`
+> - `docs/ADR/0037-postgresql-unification-and-testcontainers-strategy.md`
+> - `docs/ADR/0044-shared-testcontainers-fixture-library.md`
+> - `docs/ADR/0054-cross-service-e2e-harness.md`
+> - `.github/workflows/ci.yml`
+> - `.github/workflows/e2e.yml`
+> - `src/Common/TestInfrastructure/PostgresTestDatabaseFixture.cs`
+> - `tests/Optimist.Orchestrator.E2E/Fixtures/E2ESystemFixture.cs`
+> - `tests/Optimist.Orchestrator.E2E/Fixtures/CrossServiceE2ECollection.cs`
+> - `tests/Optimist.Orchestrator.E2E/Fixtures/MeaoApiFactory.cs`
+> - `tests/Optimist.Orchestrator.E2E/Fixtures/VimAdapterFixture.cs`
+> - `tests/Optimist.Orchestrator.E2E/Fixtures/RealVimE2ESystemFixture.cs`
+> - `tests/Optimist.Orchestrator.E2E/FullLifecycleToVimBoundaryE2ETests.cs`
+> - `src/Meao.Tests.Unit/ApmAndAuthActivitiesTests.cs`
+> - `Benchmarks/Program.cs`
+> - `Benchmarks/CsarPipelineBenchmarks.cs`
+> - `Benchmarks/AppPackageUploadBenchmark.cs`

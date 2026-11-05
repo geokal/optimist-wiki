@@ -1,15 +1,5 @@
 # Background LCM Worker Service
 
-<cite>
-**Referenced Files in This Document**   
-- `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
-- `src/PlatformManager/PlatformManager/Services/LifecycleStateMachine.cs`
-- `src/PlatformManager/PlatformManager/Services/LcmWorkQueue.cs`
-- `src/PlatformManager/PlatformManager/Services/AppInstanceService.cs`
-- `docs/ADR/0053-mepm-lcm-op-occ-persisted-replay.md`
-- `docs/ADR/0028-lcm-worker-vim-timeout.md`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -594,3 +584,12 @@ Expected behavior:
 The LCM worker service isolates long-running VIM provisioning work from the HTTP request path while preserving durability through persisted op-occs. Its replay mechanism recovers from process crashes, its idempotent-consumer guard protects against startup races, its per-operation VIM timeout prevents queue starvation, and its bounded-token transaction pattern ensures safe terminal state transitions. The worker routes Instantiate, Terminate, Operate, and ConfigurePlatformForApp operations consistently, validates state changes through `LifecycleStateMachine`, settles already-instantiated instances during replay, and dispatches subscription notifications after terminal state changes. Retry responsibility is shared between MEO’s bounded retry policy and crash-survival replay, with clear boundaries around idempotency and operational failure modes.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
+> - `src/PlatformManager/PlatformManager/Services/LifecycleStateMachine.cs`
+> - `src/PlatformManager/PlatformManager/Services/LcmWorkQueue.cs`
+> - `src/PlatformManager/PlatformManager/Services/AppInstanceService.cs`
+> - `docs/ADR/0053-mepm-lcm-op-occ-persisted-replay.md`
+> - `docs/ADR/0028-lcm-worker-vim-timeout.md`

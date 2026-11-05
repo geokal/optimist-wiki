@@ -1,27 +1,5 @@
 # AppD Descriptor Parsing and Processing
 
-<cite>
-**Referenced Files in This Document**
-- `src/ApmApi/Services/AppDDeserializerService.cs`
-- `src/ApmApi/Utils/ApmServiceHelper.cs`
-- `src/ApmApi/Background/AppDBackgroundWorker.cs`
-- `src/ApmApi/Background/AppDProcessingQueue.cs`
-- `src/ApmApi/Background/IAppDProcessingQueue.cs`
-- `src/ApmApi/Background/AppDProcessingJob.cs`
-- `src/ApmApi/Models/AppD.cs`
-- `src/ApmApi/Models/ServiceDescriptor.cs`
-- `src/ApmApi/Models/VirtualComputeDescriptor.cs`
-- `src/ApmApi/Models/VirtualStorageDescriptor.cs`
-- `src/ApmApi/Models/ServiceDependency.cs`
-- `src/ApmApi/Models/TransportDependency.cs`
-- `src/ApmApi/Models/LatencyDescriptor.cs`
-- `src/ApmApi/Dto/AppdDto.cs`
-- `src/ApmApi/Dto/ServiceDescriptorDto.cs`
-- `src/ApmApi/Migrations/20260908112511_StronglyTypedAppDDescriptors.cs`
-- `src/ApmApi/Services/IOnboardedPackageStore.cs`
-- `src/ApmApi/Services/FileSystemOnboardedPackageStore.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -614,3 +592,24 @@ The most important areas for future evolution are:
 - More complete policy and scaling model materialization.
 - Streaming-oriented YAML parsing for very large descriptors.
 - Clear extension points for custom descriptor processing without modifying core parsing logic.
+
+> **Referenced Files in This Document**
+>
+> - `src/ApmApi/Services/AppDDeserializerService.cs`
+> - `src/ApmApi/Utils/ApmServiceHelper.cs`
+> - `src/ApmApi/Background/AppDBackgroundWorker.cs`
+> - `src/ApmApi/Background/AppDProcessingQueue.cs`
+> - `src/ApmApi/Background/IAppDProcessingQueue.cs`
+> - `src/ApmApi/Background/AppDProcessingJob.cs`
+> - `src/ApmApi/Models/AppD.cs`
+> - `src/ApmApi/Models/ServiceDescriptor.cs`
+> - `src/ApmApi/Models/VirtualComputeDescriptor.cs`
+> - `src/ApmApi/Models/VirtualStorageDescriptor.cs`
+> - `src/ApmApi/Models/ServiceDependency.cs`
+> - `src/ApmApi/Models/TransportDependency.cs`
+> - `src/ApmApi/Models/LatencyDescriptor.cs`
+> - `src/ApmApi/Dto/AppdDto.cs`
+> - `src/ApmApi/Dto/ServiceDescriptorDto.cs`
+> - `src/ApmApi/Migrations/20260908112511_StronglyTypedAppDDescriptors.cs`
+> - `src/ApmApi/Services/IOnboardedPackageStore.cs`
+> - `src/ApmApi/Services/FileSystemOnboardedPackageStore.cs`

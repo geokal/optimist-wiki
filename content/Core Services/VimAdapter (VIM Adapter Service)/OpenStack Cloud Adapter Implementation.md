@@ -1,24 +1,5 @@
 # OpenStack Cloud Adapter Implementation
 
-<cite>
-**Referenced Files in This Document**   
-- `src/VimAdapter/README.md`
-- `docs/OPENSTACK_VIM_ADAPTER.md`
-- `src/VimAdapter/src/server/lcm_grpc_server.py`
-- `src/VimAdapter/src/adapters/openstack/openstack_adapter.py`
-- `src/VimAdapter/src/adapters/factory.py`
-- `src/VimAdapter/src/adapters/base.py`
-- `src/VimAdapter/src/services/nova_service.py`
-- `src/VimAdapter/src/services/neutron_service.py`
-- `src/VimAdapter/src/services/cinder_service.py`
-- `src/VimAdapter/src/services/glance_service.py`
-- `src/VimAdapter/src/services/keystone_service.py`
-- `src/VimAdapter/src/services/heat_service.py`
-- `src/VimAdapter/src/utils/infrastructure_lookup.py`
-- `src/VimAdapter/src/utils/config_store.py`
-- `src/VimAdapter/src/utils/csar_manifest.py`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -716,3 +697,21 @@ For production use, operators should:
 - Add floating IP handling if external access is required.
 - Monitor OpenStack API latency and adjust adapter polling timeouts.
 - Plan for Phase 26-style Keystone hardening when strict per-instance identity isolation is mandatory.
+
+> **Referenced Files in This Document**
+>
+> - `src/VimAdapter/README.md`
+> - `docs/OPENSTACK_VIM_ADAPTER.md`
+> - `src/VimAdapter/src/server/lcm_grpc_server.py`
+> - `src/VimAdapter/src/adapters/openstack/openstack_adapter.py`
+> - `src/VimAdapter/src/adapters/factory.py`
+> - `src/VimAdapter/src/adapters/base.py`
+> - `src/VimAdapter/src/services/nova_service.py`
+> - `src/VimAdapter/src/services/neutron_service.py`
+> - `src/VimAdapter/src/services/cinder_service.py`
+> - `src/VimAdapter/src/services/glance_service.py`
+> - `src/VimAdapter/src/services/keystone_service.py`
+> - `src/VimAdapter/src/services/heat_service.py`
+> - `src/VimAdapter/src/utils/infrastructure_lookup.py`
+> - `src/VimAdapter/src/utils/config_store.py`
+> - `src/VimAdapter/src/utils/csar_manifest.py`

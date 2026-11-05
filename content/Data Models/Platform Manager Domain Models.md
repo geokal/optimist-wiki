@@ -1,25 +1,5 @@
 # Platform Manager Domain Models
 
-<cite>
-**Referenced Files in This Document**
-- `src/PlatformManager/PlatformManager/Program.cs`
-- `src/PlatformManager/PlatformManager/Endpoints/LcmEndpoint.cs`
-- `src/PlatformManager/PlatformManager/Endpoints/AppInstanceEndpoints.cs`
-- `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
-- `src/PlatformManager/PlatformManager/Services/LcmWorkQueue.cs`
-- `src/PlatformManager/PlatformManager/Services/NotificationDispatcherService.cs`
-- `src/PlatformManager/PlatformManager/Services/LifecycleStateMachine.cs`
-- `src/PlatformManager/PlatformManager/Services/AppInstanceService.cs`
-- `src/PlatformManager/PlatformManager/Services/IAppInstanceService.cs`
-- `src/PlatformManager/PlatformManager/Services/PluginAdapter/GrpcClient.cs`
-- `src/PlatformManager/PlatformManager/Services/PluginAdapter/PluginFactory.cs`
-- `src/PlatformManager/PlatformManager/Models/AppInstance.cs`
-- `src/PlatformManager/PlatformManager/Models/AppInstanceLcmOpOcc.cs`
-- `src/PlatformManager/PlatformManager/Models/AppPkgRecord.cs`
-- `src/PlatformManager/PlatformManager/Models/LcmConstants.cs`
-- `src/PlatformManager/PlatformManager/Data/LcmDbContext.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -640,3 +620,22 @@ graph LR
 
 ## Conclusion
 Platform Manager’s lifecycle operation domain models center on durable operation occurrences and a resilient background worker. The design isolates HTTP requests from long-running VIM calls, enforces ETSI-aligned state transitions, and provides crash-safe replay for stranded processing operations. VIM communication is abstracted through a plugin factory and typed gRPC client with configurable timeouts and retry behavior. Notifications are dispatched asynchronously to subscribers after successful settlement. While distributed transactions are not used, the combination of local transactions, idempotent checks, filtered unique indexes, and explicit terminal states provides robust failure recovery. For production deployments, operators should monitor operation state transitions, VIM timeouts, gRPC retry metrics, and notification delivery outcomes.
+
+> **Referenced Files in This Document**
+>
+> - `src/PlatformManager/PlatformManager/Program.cs`
+> - `src/PlatformManager/PlatformManager/Endpoints/LcmEndpoint.cs`
+> - `src/PlatformManager/PlatformManager/Endpoints/AppInstanceEndpoints.cs`
+> - `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
+> - `src/PlatformManager/PlatformManager/Services/LcmWorkQueue.cs`
+> - `src/PlatformManager/PlatformManager/Services/NotificationDispatcherService.cs`
+> - `src/PlatformManager/PlatformManager/Services/LifecycleStateMachine.cs`
+> - `src/PlatformManager/PlatformManager/Services/AppInstanceService.cs`
+> - `src/PlatformManager/PlatformManager/Services/IAppInstanceService.cs`
+> - `src/PlatformManager/PlatformManager/Services/PluginAdapter/GrpcClient.cs`
+> - `src/PlatformManager/PlatformManager/Services/PluginAdapter/PluginFactory.cs`
+> - `src/PlatformManager/PlatformManager/Models/AppInstance.cs`
+> - `src/PlatformManager/PlatformManager/Models/AppInstanceLcmOpOcc.cs`
+> - `src/PlatformManager/PlatformManager/Models/AppPkgRecord.cs`
+> - `src/PlatformManager/PlatformManager/Models/LcmConstants.cs`
+> - `src/PlatformManager/PlatformManager/Data/LcmDbContext.cs`

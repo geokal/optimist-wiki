@@ -1,27 +1,5 @@
 # Monitoring & Observability
 
-<cite>
-**Referenced Files in This Document**   
-- `README.md`
-- `docs/ADR/0016-shared-opentelemetry.md`
-- `src/Common/Telemetry/TelemetryExtensions.cs`
-- `src/Meao/Program.cs`
-- `src/ApmApi/Program.cs`
-- `src/Catalogue/Program.cs`
-- `src/PlatformManager/PlatformManager/Program.cs`
-- `src/Meao/Services/MepmCensusReconciliationWorker.cs`
-- `src/Meao/Activities/MepmActivities.cs`
-- `src/PlatformManager/PlatformManager\Services/OrasDistributionClient.cs`
-- `config/otel-collector-config.yaml`
-- `docker-compose.infra.yml`
-- `docker/prometheus_conf/prometheus.yml`
-- `docker/grafana_conf/provisioning/datasources/prometheus.yaml`
-- `docker/grafana_conf/provisioning/dashboards/dashboards.yaml`
-- `docker/grafana_conf/dashboards/dotnet-services.json`
-- `docker/grafana_conf/dashboards/docker-containers.json`
-- `docker/grafana_conf/dashboards/apisix-gateway.json`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -594,3 +572,24 @@ To mature the system further, add:
 - Sampling and cardinality controls for production telemetry volume.
 - Custom dashboards for MEPM lifecycle operations and VIM adapter status.
 - Synthetic probes for external dependencies such as Keycloak, Temporal, and registries.
+
+> **Referenced Files in This Document**
+>
+> - `README.md`
+> - `docs/ADR/0016-shared-opentelemetry.md`
+> - `src/Common/Telemetry/TelemetryExtensions.cs`
+> - `src/Meao/Program.cs`
+> - `src/ApmApi/Program.cs`
+> - `src/Catalogue/Program.cs`
+> - `src/PlatformManager/PlatformManager/Program.cs`
+> - `src/Meao/Services/MepmCensusReconciliationWorker.cs`
+> - `src/Meao/Activities/MepmActivities.cs`
+> - `src/PlatformManager/PlatformManager\Services/OrasDistributionClient.cs`
+> - `config/otel-collector-config.yaml`
+> - `docker-compose.infra.yml`
+> - `docker/prometheus_conf/prometheus.yml`
+> - `docker/grafana_conf/provisioning/datasources/prometheus.yaml`
+> - `docker/grafana_conf/provisioning/dashboards/dashboards.yaml`
+> - `docker/grafana_conf/dashboards/dotnet-services.json`
+> - `docker/grafana_conf/dashboards/docker-containers.json`
+> - `docker/grafana_conf/dashboards/apisix-gateway.json`

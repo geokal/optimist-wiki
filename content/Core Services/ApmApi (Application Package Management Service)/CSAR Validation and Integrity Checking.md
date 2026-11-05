@@ -1,19 +1,5 @@
 # CSAR Validation and Integrity Checking
 
-<cite>
-**Referenced Files in This Document**
-- `docs/ADR/0004-package-validation-authority-and-csar-integrity.md`
-- `docs/ADR/0024-csar-decompression-bound.md`
-- `docs/ADR/0025-rfc7807-structured-error-model.md`
-- `docs/CSAR_DISTRIBUTION_AND_LIFECYCLE_ARCHITECTURE.md`
-- `src/ApmApi/Endpoints/ApmEndpoints.cs`
-- `src/ApmApi/Services/PackageValidator.cs`
-- `src/ApmApi/Services/FileSystemCsarStagingStore.cs`
-- `src/Common/Models/CsarManifestParser.cs`
-- `src/ApmApi/Validators/CreateAppPkgValidator.cs`
-- `Benchmarks/CsarPipelineBenchmarks.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -501,3 +487,16 @@ The repository implements a practical CSAR validation and integrity pipeline foc
 - Bounded descriptor decompression to mitigate zip-bomb risks.
 
 It does not implement a complete ETSI schema validator, full cross-reference resolver, or cryptographic signature verifier. Those capabilities would need to be added explicitly if higher assurance is required. For most onboarding workflows, the combination of upload validation, claim-checked durability, bounded processing, descriptor checks, and checksum verification provides a strong operational foundation.
+
+> **Referenced Files in This Document**
+>
+> - `docs/ADR/0004-package-validation-authority-and-csar-integrity.md`
+> - `docs/ADR/0024-csar-decompression-bound.md`
+> - `docs/ADR/0025-rfc7807-structured-error-model.md`
+> - `docs/CSAR_DISTRIBUTION_AND_LIFECYCLE_ARCHITECTURE.md`
+> - `src/ApmApi/Endpoints/ApmEndpoints.cs`
+> - `src/ApmApi/Services/PackageValidator.cs`
+> - `src/ApmApi/Services/FileSystemCsarStagingStore.cs`
+> - `src/Common/Models/CsarManifestParser.cs`
+> - `src/ApmApi/Validators/CreateAppPkgValidator.cs`
+> - `Benchmarks/CsarPipelineBenchmarks.cs`

@@ -1,20 +1,5 @@
 # REST API Endpoints
 
-<cite>
-**Referenced Files in This Document**
-- `src/Meao/Endpoints/GrantEndpoints.cs`
-- `src/Meao/Endpoints/AppInstanceEndpoints.cs`
-- `src/Meao/Utils/GrantHelper.cs`
-- `src/Meao/Validators/GrantRequestValidator.cs`
-- `src/Meao/Requests/CreateAppInstRequest.cs`
-- `src/Meao/Requests/CreateAppInstCommand.cs`
-- `src/Meao/Validators/CreateAppInstRequestValidator.cs`
-- `src/Meao/Models/AppInstanceInfo.cs`
-- `src/Meao/Models/GrantInfo.cs`
-- `docs/ETSI_SPECS/MEC01002_AppGrant.yaml`
-- `docs/ETSI_SPECS/MEC01002_AppLcm.yaml`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -418,3 +403,17 @@ For reliable integration:
 - Use the grant identifier returned by creation for all subsequent grant reads.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `src/Meao/Endpoints/GrantEndpoints.cs`
+> - `src/Meao/Endpoints/AppInstanceEndpoints.cs`
+> - `src/Meao/Utils/GrantHelper.cs`
+> - `src/Meao/Validators/GrantRequestValidator.cs`
+> - `src/Meao/Requests/CreateAppInstRequest.cs`
+> - `src/Meao/Requests/CreateAppInstCommand.cs`
+> - `src/Meao/Validators/CreateAppInstRequestValidator.cs`
+> - `src/Meao/Models/AppInstanceInfo.cs`
+> - `src/Meao/Models/GrantInfo.cs`
+> - `docs/ETSI_SPECS/MEC01002_AppGrant.yaml`
+> - `docs/ETSI_SPECS/MEC01002_AppLcm.yaml`

@@ -1,25 +1,5 @@
 # Adapter Architecture and gRPC Interface
 
-<cite>
-**Referenced Files in This Document**
-- `src/VimAdapter/protos/lcmservice.proto`
-- `src/VimAdapter/src/server/lcm_grpc_server.py`
-- `src/VimAdapter/src/adapters/factory.py`
-- `src/VimAdapter/src/adapters/base.py`
-- `src/VimAdapter/src/adapters/helm/helm_adapter.py`
-- `src/VimAdapter/src/adapters/openstack/openstack_adapter.py`
-- `src/PlatformManager/PlatformManager/Services/AppInstanceService.cs`
-- `src/PlatformManager/PlatformManager/Services/ConfigService.cs`
-- `src/PlatformManager/PlatformManager/Services/PluginAdapter/GrpcFactory.cs`
-- `src/PlatformManager/PlatformManager/Program.cs`
-- `src/PlatformManager/PlatformManager/Utils/GrpcCredentialsHelper.cs`
-- `docs/contexts/vimadapter.md`
-- `docs/ADR/0012-vim-adapter-factory.md`
-- `docs/ADR/0013-grpc-mm6-transport.md`
-- `tests/Optimist.Orchestrator.E2E/Fixtures/VimAdapterFixture.cs`
-- `tests/Optimist.Orchestrator.E2E/Grpc/FakeVimAdapterServer.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -623,3 +603,22 @@ For future evolution:
 - Extend backend support by registering new adapters rather than modifying the gRPC servicer.
 - Preserve clear separation between transport security, VIM provider authentication, and application lifecycle logic.
 - Use streaming, timeouts, cancellation, and structured errors to keep the system observable and resilient.
+
+> **Referenced Files in This Document**
+>
+> - `src/VimAdapter/protos/lcmservice.proto`
+> - `src/VimAdapter/src/server/lcm_grpc_server.py`
+> - `src/VimAdapter/src/adapters/factory.py`
+> - `src/VimAdapter/src/adapters/base.py`
+> - `src/VimAdapter/src/adapters/helm/helm_adapter.py`
+> - `src/VimAdapter/src/adapters/openstack/openstack_adapter.py`
+> - `src/PlatformManager/PlatformManager/Services/AppInstanceService.cs`
+> - `src/PlatformManager/PlatformManager/Services/ConfigService.cs`
+> - `src/PlatformManager/PlatformManager/Services/PluginAdapter/GrpcFactory.cs`
+> - `src/PlatformManager/PlatformManager/Program.cs`
+> - `src/PlatformManager/PlatformManager/Utils/GrpcCredentialsHelper.cs`
+> - `docs/contexts/vimadapter.md`
+> - `docs/ADR/0012-vim-adapter-factory.md`
+> - `docs/ADR/0013-grpc-mm6-transport.md`
+> - `tests/Optimist.Orchestrator.E2E/Fixtures/VimAdapterFixture.cs`
+> - `tests/Optimist.Orchestrator.E2E/Grpc/FakeVimAdapterServer.cs`

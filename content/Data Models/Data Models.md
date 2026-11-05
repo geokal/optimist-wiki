@@ -1,27 +1,5 @@
 # Data Models
 
-<cite>
-**Referenced Files in This Document**
-- `src/Meao/Models/AppInstanceInfo.cs`
-- `src/Meao/Models/GrantInfo.cs`
-- `src/Meao/Models/LcmOpOccNotificationRecord.cs`
-- `src/Meao/Data/MeaoDBContext.cs`
-- `src/Meao/Migrations/20260819104304_PostgresInitial.cs`
-- `src/Common/Models/AppInstanceDtos.cs`
-- `src/Common/Models/GrantDtos.cs`
-- `src/Common/Models/VimConnectionInfoDto.cs`
-- `src/Common/Models/Enums.cs`
-- `src/Common/Models/SupportModels.cs`
-- `src/Common/Models/AppPackageInventoryDtos.cs`
-- `src/Common/Models/OnboardAppPkgRequest.cs`
-- `src/Catalogue/Models/AppInstance.cs`
-- `src/Catalogue/Models/AppPackage.cs`
-- `src/Catalogue/Models/EdgeHost.cs`
-- `src/Catalogue/ApiContext.cs`
-- `src/Catalogue/Migrations/20260728121602_PostgresInitial.cs`
-- `src/ApmApi/Models/ApmDbContext.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -632,3 +610,24 @@ graph LR
 
 ## Conclusion
 The data model centers on five core entities: `AppInstance`, `EdgeHost`, `AppPackage`, `Grant`, and lifecycle operation occurrence records. The system separates shared wire contracts from service-specific persistence models, uses PostgreSQL with EF Core migrations, and applies consistency safeguards through ownership tokens, immutable snapshots, row-version concurrency, and idempotent notification records. Security-sensitive fields such as VIM access credentials require careful projection, and audit timestamps enable traceability. Retention policies should be explicitly implemented for long-lived operational data. Future evolution toward event sourcing should preserve the existing separation between command-side persistence and query-side projections.
+
+> **Referenced Files in This Document**
+>
+> - `src/Meao/Models/AppInstanceInfo.cs`
+> - `src/Meao/Models/GrantInfo.cs`
+> - `src/Meao/Models/LcmOpOccNotificationRecord.cs`
+> - `src/Meao/Data/MeaoDBContext.cs`
+> - `src/Meao/Migrations/20260819104304_PostgresInitial.cs`
+> - `src/Common/Models/AppInstanceDtos.cs`
+> - `src/Common/Models/GrantDtos.cs`
+> - `src/Common/Models/VimConnectionInfoDto.cs`
+> - `src/Common/Models/Enums.cs`
+> - `src/Common/Models/SupportModels.cs`
+> - `src/Common/Models/AppPackageInventoryDtos.cs`
+> - `src/Common/Models/OnboardAppPkgRequest.cs`
+> - `src/Catalogue/Models/AppInstance.cs`
+> - `src/Catalogue/Models/AppPackage.cs`
+> - `src/Catalogue/Models/EdgeHost.cs`
+> - `src/Catalogue/ApiContext.cs`
+> - `src/Catalogue/Migrations/20260728121602_PostgresInitial.cs`
+> - `src/ApmApi/Models/ApmDbContext.cs`

@@ -1,34 +1,5 @@
 # Custom Adapter Development Guide
 
-<cite>
-**Referenced Files in This Document**
-- `src/VimAdapter/README.md`
-- `docs/ADR/0012-vim-adapter-factory.md`
-- `docs/ADR/0017-vimadapter-python.md`
-- `docs/CONTEXT-MAP.md`
-- `docs/OPENSTACK_VIM_ADAPTER.md`
-- `docs/contexts/vimadapter.md`
-- `src/VimAdapter/main.py`
-- `src/VimAdapter/Dockerfile`
-- `src/VimAdapter/.devcontainer/devcontainer.json`
-- `src/VimAdapter/.python-version`
-- `src/VimAdapter/requirements.txt`
-- `src/VimAdapter/src/server/lcm_grpc_server.py`
-- `src/VimAdapter/src/adapters/base.py`
-- `src/VimAdapter/src/adapters/factory.py`
-- `src/VimAdapter/src/adapters/helm/helm_adapter.py`
-- `src/VimAdapter/src/adapters/openstack/openstack_adapter.py`
-- `src/VimAdapter/src/clients/k8s_client.py`
-- `src/VimAdapter/src/utils/config_store.py`
-- `src/VimAdapter/src/utils/fs.py`
-- `src/VimAdapter/src/utils/validation.py`
-- `src/VimAdapter/src/utils/csar_manifest.py`
-- `src/VimAdapter/src/utils/infrastructure_lookup.py`
-- `src/VimAdapter/tests/test_helm_adapter.py`
-- `src/VimAdapter/tests/test_openstack_adapter.py`
-- `src/VimAdapter/tests/test_service_mocks.py`
-</cite>
-
 ## Update Summary
 **Changes Made**
 - Updated the development and deployment toolchain section to reflect that `uv` is now the only supported Python toolchain.
@@ -1168,3 +1139,31 @@ For reliable custom adapters:
 - Test with mocks first, then integrate against containers or real VIMs.
 - Build reproducible images and expose clear health checks.
 - Measure performance on the critical paths: configuration validation, CSAR extraction, and backend polling.
+
+> **Referenced Files in This Document**
+>
+> - `src/VimAdapter/README.md`
+> - `docs/ADR/0012-vim-adapter-factory.md`
+> - `docs/ADR/0017-vimadapter-python.md`
+> - `docs/CONTEXT-MAP.md`
+> - `docs/OPENSTACK_VIM_ADAPTER.md`
+> - `docs/contexts/vimadapter.md`
+> - `src/VimAdapter/main.py`
+> - `src/VimAdapter/Dockerfile`
+> - `src/VimAdapter/.devcontainer/devcontainer.json`
+> - `src/VimAdapter/.python-version`
+> - `src/VimAdapter/requirements.txt`
+> - `src/VimAdapter/src/server/lcm_grpc_server.py`
+> - `src/VimAdapter/src/adapters/base.py`
+> - `src/VimAdapter/src/adapters/factory.py`
+> - `src/VimAdapter/src/adapters/helm/helm_adapter.py`
+> - `src/VimAdapter/src/adapters/openstack/openstack_adapter.py`
+> - `src/VimAdapter/src/clients/k8s_client.py`
+> - `src/VimAdapter/src/utils/config_store.py`
+> - `src/VimAdapter/src/utils/fs.py`
+> - `src/VimAdapter/src/utils/validation.py`
+> - `src/VimAdapter/src/utils/csar_manifest.py`
+> - `src/VimAdapter/src/utils/infrastructure_lookup.py`
+> - `src/VimAdapter/tests/test_helm_adapter.py`
+> - `src/VimAdapter/tests/test_openstack_adapter.py`
+> - `src/VimAdapter/tests/test_service_mocks.py`

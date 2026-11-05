@@ -1,22 +1,5 @@
 # Temporal Activities and Side Effects
 
-<cite>
-**Referenced Files in This Document**   
-- `src/Meao/Activities/PlacementActivities.cs`
-- `src/Meao/Activities/ApmActivities.cs`
-- `src/Meao/Activities/CatalogueActivities.cs`
-- `src/Meao/Activities/MepmActivities.cs`
-- `src/Meao/Utils/HttpActivityHelper.cs`
-- `src/Meao/Workflows/Policies/ActivityPolicies.cs`
-- `src/Meao/Infrastructure/MeaoHttpClientRegistration.cs`
-- `src/Meao/Program.cs`
-- `src/Meao.Tests.Unit/PlacementActivitiesTests.cs`
-- `src/Meao.Tests.Unit/HttpActivityHelperTests.cs`
-- `src/Meao.Tests.Unit/ApmAndAuthActivitiesTests.cs`
-- `src/Meao.Tests.Unit/Workflows/OnboardAppPkgWFTests.cs`
-- `src/Meao.Tests.Unit/InstantiateAppInstWFTests.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -430,3 +413,19 @@ These practices make workflows robust under restarts, retries, and partial failu
 - Write unit tests that exercise both success and failure branches.
 
 [No sources needed since this section provides general guidance]
+
+> **Referenced Files in This Document**
+>
+> - `src/Meao/Activities/PlacementActivities.cs`
+> - `src/Meao/Activities/ApmActivities.cs`
+> - `src/Meao/Activities/CatalogueActivities.cs`
+> - `src/Meao/Activities/MepmActivities.cs`
+> - `src/Meao/Utils/HttpActivityHelper.cs`
+> - `src/Meao/Workflows/Policies/ActivityPolicies.cs`
+> - `src/Meao/Infrastructure/MeaoHttpClientRegistration.cs`
+> - `src/Meao/Program.cs`
+> - `src/Meao.Tests.Unit/PlacementActivitiesTests.cs`
+> - `src/Meao.Tests.Unit/HttpActivityHelperTests.cs`
+> - `src/Meao.Tests.Unit/ApmAndAuthActivitiesTests.cs`
+> - `src/Meao.Tests.Unit/Workflows/OnboardAppPkgWFTests.cs`
+> - `src/Meao.Tests.Unit/InstantiateAppInstWFTests.cs`

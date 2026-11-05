@@ -1,25 +1,5 @@
 # MEO Domain Models
 
-<cite>
-**Referenced Files in This Document**
-- `src/Meao/Domain/Placement/IPlacementEngine.cs`
-- `src/Meao/Domain/Placement/IPlacementPolicy.cs`
-- `src/Meao/Domain/Placement/PlacementConstraints.cs`
-- `src/Meao/Domain/Placement/PlacementDecision.cs`
-- `src/Meao/Domain/Placement/PlacementEngine.cs`
-- `src/Meao/Activities/PlacementActivities.cs`
-- `src/Meao/Models/AppInstanceInfo.cs`
-- `src/Meao/Models/VimConnectionInfo.cs`
-- `src/Meao/Models/GrantInfo.cs`
-- `src/Meao/Models/AppInstanceInfoMapper.cs`
-- `src/Meao/Migrations/20260819104304_PostgresInitial.cs`
-- `src/Meao/Migrations/20260821085847_AddAppInstanceVimConnectionInfoKeyedRelationship.cs`
-- `src/Meao/Data/MeaoDBContext.cs`
-- `docs/docs/ADR/0027-persist-vimtype-on-appinstance.md`
-- `docs/docs/ADR/0030-persist-vim-context-on-appinstance.md`
-- `docs/docs/ADR/0045-meo-placement-engine-and-unified-catalogue-inventory-model.md`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -524,3 +504,22 @@ For AppInstance state management, placement decisions supply host and resource a
 At scale, the most important improvements are catalogue caching, parallel policy execution, service indexing, and candidate-set limits. Until those are added, operators should monitor catalogue health, keep policy counts reasonable, and validate constraints before deployment.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `src/Meao/Domain/Placement/IPlacementEngine.cs`
+> - `src/Meao/Domain/Placement/IPlacementPolicy.cs`
+> - `src/Meao/Domain/Placement/PlacementConstraints.cs`
+> - `src/Meao/Domain/Placement/PlacementDecision.cs`
+> - `src/Meao/Domain/Placement/PlacementEngine.cs`
+> - `src/Meao/Activities/PlacementActivities.cs`
+> - `src/Meao/Models/AppInstanceInfo.cs`
+> - `src/Meao/Models/VimConnectionInfo.cs`
+> - `src/Meao/Models/GrantInfo.cs`
+> - `src/Meao/Models/AppInstanceInfoMapper.cs`
+> - `src/Meao/Migrations/20260819104304_PostgresInitial.cs`
+> - `src/Meao/Migrations/20260821085847_AddAppInstanceVimConnectionInfoKeyedRelationship.cs`
+> - `src/Meao/Data/MeaoDBContext.cs`
+> - `docs/docs/ADR/0027-persist-vimtype-on-appinstance.md`
+> - `docs/docs/ADR/0030-persist-vim-context-on-appinstance.md`
+> - `docs/docs/ADR/0045-meo-placement-engine-and-unified-catalogue-inventory-model.md`

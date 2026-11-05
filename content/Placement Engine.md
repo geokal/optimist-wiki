@@ -1,21 +1,5 @@
 # Placement Engine
 
-<cite>
-**Referenced Files in This Document**
-- `src/Meao/Domain/Placement/IPlacementEngine.cs`
-- `src/Meao/Domain/Placement/PlacementEngine.cs`
-- `src/Meao/Domain/Placement/IPlacementPolicy.cs`
-- `src/Meao/Domain/Placement/PlacementConstraints.cs`
-- `src/Meao/Domain/Placement/PlacementDecision.cs`
-- `src/Meao/Domain/Placement/Policies/CostAwarePolicy.cs`
-- `src/Meao/Domain/Placement/Policies/GpuRequirementPolicy.cs`
-- `src/Meao/Domain/Placement/Policies/TenantSiteAffinityPolicy.cs`
-- `src/Meao/Activities/PlacementActivities.cs`
-- `src/Common/Models/CapacityRequests.cs`
-- `docs/ADR/0045-meo-placement-engine-and-unified-catalogue-inventory-model.md`
-- `docs/ADR/0038-mep-host-service-registry-and-meo-catalogue-sync.md`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -587,3 +571,18 @@ For production use:
 - Confirm that capacity reservation and release paths remain consistent with the lifecycle managed by the workflow and VIM adapters.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `src/Meao/Domain/Placement/IPlacementEngine.cs`
+> - `src/Meao/Domain/Placement/PlacementEngine.cs`
+> - `src/Meao/Domain/Placement/IPlacementPolicy.cs`
+> - `src/Meao/Domain/Placement/PlacementConstraints.cs`
+> - `src/Meao/Domain/Placement/PlacementDecision.cs`
+> - `src/Meao/Domain/Placement/Policies/CostAwarePolicy.cs`
+> - `src/Meao/Domain/Placement/Policies/GpuRequirementPolicy.cs`
+> - `src/Meao/Domain/Placement/Policies/TenantSiteAffinityPolicy.cs`
+> - `src/Meao/Activities/PlacementActivities.cs`
+> - `src/Common/Models/CapacityRequests.cs`
+> - `docs/ADR/0045-meo-placement-engine-and-unified-catalogue-inventory-model.md`
+> - `docs/ADR/0038-mep-host-service-registry-and-meo-catalogue-sync.md`

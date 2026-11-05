@@ -1,20 +1,5 @@
 # ETSI Granting API
 
-<cite>
-**Referenced Files in This Document**   
-- `src/Meao/Endpoints/GrantEndpoints.cs`
-- `src/Common/Models/GrantDtos.cs`
-- `src/Common/Models/SupportModels.cs`
-- `src/Meao/Validators/GrantRequestValidator.cs`
-- `src/Meao/Utils/GrantHelper.cs`
-- `src/Meao/Models/GrantInfo.cs`
-- `src/Meao/Activities/GrantActivities.cs`
-- `src/Meao/Program.cs`
-- `src/Meao/appsettings.json`
-- `docs/ETSI_SPECS/MEC01002_AppGrant.yaml`
-- `src/Meao.Tests.Unit/GrantEndpointsSnapshotTests.GetGrant_ReturnsExpectedEtsiContractSnapshot.verified.txt`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -544,3 +529,17 @@ Key takeaways:
 - Treat grants as pre-provisioning authorization artifacts within the broader ETSI MEC application lifecycle.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `src/Meao/Endpoints/GrantEndpoints.cs`
+> - `src/Common/Models/GrantDtos.cs`
+> - `src/Common/Models/SupportModels.cs`
+> - `src/Meao/Validators/GrantRequestValidator.cs`
+> - `src/Meao/Utils/GrantHelper.cs`
+> - `src/Meao/Models/GrantInfo.cs`
+> - `src/Meao/Activities/GrantActivities.cs`
+> - `src/Meao/Program.cs`
+> - `src/Meao/appsettings.json`
+> - `docs/ETSI_SPECS/MEC01002_AppGrant.yaml`
+> - `src/Meao.Tests.Unit/GrantEndpointsSnapshotTests.GetGrant_ReturnsExpectedEtsiContractSnapshot.verified.txt`

@@ -1,18 +1,5 @@
 # Service Configuration and Health
 
-<cite>
-**Referenced Files in This Document**
-- `src/Meao/appsettings.json`
-- `src/Meao/Program.cs`
-- `src/Meao/ServiceCollectionExtensions.cs`
-- `src/Common/Telemetry/TelemetryExtensions.cs`
-- `docker-compose.yml`
-- `docker-compose.override.yml`
-- `charts/optimist-apps/values.yaml`
-- `charts/optimist-apps/templates/deployment.yaml`
-- `docs/CONFIGURATION.md`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -483,3 +470,15 @@ If you need to run database migrations separately, use the `--migrate-only` argu
 
 ## Conclusion
 Meao’s configuration follows standard ASP.NET Core conventions: defaults in `appsettings.json`, overridden by environment variables from Docker Compose or Helm. Production deployments should externalize sensitive values, ensure `MEAO_PUBLIC_URL` is set, configure Consul and Keycloak for the target environment, provide a valid Temporal target host, and route OpenTelemetry to a reachable collector. Health endpoints provide basic liveness and readiness signals, with readiness currently tied to PostgreSQL connectivity. For stronger operational guarantees, consider adding explicit health checks for Temporal, Consul, and Keycloak.
+
+> **Referenced Files in This Document**
+>
+> - `src/Meao/appsettings.json`
+> - `src/Meao/Program.cs`
+> - `src/Meao/ServiceCollectionExtensions.cs`
+> - `src/Common/Telemetry/TelemetryExtensions.cs`
+> - `docker-compose.yml`
+> - `docker-compose.override.yml`
+> - `charts/optimist-apps/values.yaml`
+> - `charts/optimist-apps/templates/deployment.yaml`
+> - `docs/CONFIGURATION.md`

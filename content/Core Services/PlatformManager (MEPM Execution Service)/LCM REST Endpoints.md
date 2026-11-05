@@ -1,21 +1,5 @@
 # LCM REST Endpoints
 
-<cite>
-**Referenced Files in This Document**
-- `src/PlatformManager/PlatformManager/Endpoints/LcmEndpoint.cs`
-- `src/PlatformManager/PlatformManager/Endpoints/AppInstanceEndpoints.cs`
-- `src/PlatformManager/PlatformManager/Endpoints/LcmOpOccEndpoints.cs`
-- `src/PlatformManager/PlatformManager/Endpoints/PlatformConfigEndpoints.cs`
-- `src/PlatformManager/PlatformManager/Services/AppInstanceService.cs`
-- `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
-- `src/PlatformManager/PlatformManager/Models/AppInstanceLcmOpOcc.cs`
-- `src/PlatformManager/PlatformManager/Validators/InstantiateAppRequestDtoValidator.cs`
-- `src/PlatformManager/PlatformManager/Validators/TerminateAppRequestDtoValidator.cs`
-- `src/PlatformManager/PlatformManager/Validators/OperateRequestValidator.cs`
-- `src/PlatformManager/PlatformManager/Validators/ConfigPlatformForAppRequestDtoValidator.cs`
-- `src/PlatformManager/PlatformManager/Infrastructure/KeycloakServiceTokenHandler.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [API Surface and Base URL](#api-surface-and-base-url)
@@ -505,3 +489,18 @@ If a notification callback fails, the error is logged and swallowed so that term
 
 ## Conclusion
 The PlatformManager’s LCM REST API implements asynchronous lifecycle management by combining strict request validation, persistent op-occ state tracking, and offloaded VIM execution. Clients should treat lifecycle endpoints as fire-and-forget entry points and rely on op-occ polling and subscription notifications for final state. Authentication is expected through Keycloak JWT where configured, with fallback authorization policies protecting mutations. Status synchronization between MEO grants, the PlatformManager database, and VIM adapters is maintained through explicit state transitions, crash-replay handling, and terminal notification dispatch.
+
+> **Referenced Files in This Document**
+>
+> - `src/PlatformManager/PlatformManager/Endpoints/LcmEndpoint.cs`
+> - `src/PlatformManager/PlatformManager/Endpoints/AppInstanceEndpoints.cs`
+> - `src/PlatformManager/PlatformManager/Endpoints/LcmOpOccEndpoints.cs`
+> - `src/PlatformManager/PlatformManager/Endpoints/PlatformConfigEndpoints.cs`
+> - `src/PlatformManager/PlatformManager/Services/AppInstanceService.cs`
+> - `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
+> - `src/PlatformManager/PlatformManager/Models/AppInstanceLcmOpOcc.cs`
+> - `src/PlatformManager/PlatformManager/Validators/InstantiateAppRequestDtoValidator.cs`
+> - `src/PlatformManager/PlatformManager/Validators/TerminateAppRequestDtoValidator.cs`
+> - `src/PlatformManager/PlatformManager/Validators/OperateRequestValidator.cs`
+> - `src/PlatformManager/PlatformManager/Validators/ConfigPlatformForAppRequestDtoValidator.cs`
+> - `src/PlatformManager/PlatformManager/Infrastructure/KeycloakServiceTokenHandler.cs`

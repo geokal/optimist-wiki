@@ -1,25 +1,5 @@
 # Troubleshooting & FAQ
 
-<cite>
-**Referenced Files in This Document**   
-- `docs/ERROR_HANDLING_AND_VALIDATION_ARCHITECTURE.md`
-- `docs/OPENSTACK_VIM_ADAPTER.md`
-- `src/VimAdapter/README.md`
-- `docs/DEPLOYMENT.md`
-- `docs/GETTING-STARTED.md`
-- `docs/CONFIGURATION.md`
-- `docs/PRODUCTION_READINESS_AND_KUBERNETES_RESTART_RECOVERABILITY_AUDIT.md`
-- `docker-compose.yml`
-- `docker-compose.infra.yml`
-- `src/Meao/appsettings.json`
-- `src/PlatformManager/PlatformManager/appsettings.json`
-- `src/ApmApi/appsettings.json`
-- `src/Catalogue/appsettings.json`
-- `charts/optimist-apps/values.yaml`
-- `charts/optimist-apps/templates/deployment.yaml`
-- `.github/workflows/cd.yml`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure and Operational Boundaries](#project-structure-and-operational-boundaries)
@@ -796,3 +776,22 @@ Troubleshooting Optimist.Orchestrator requires separating concerns across layers
 - VIM adapter configuration or external infrastructure failures.
 
 Use the diagnostic checklist and log analysis patterns to isolate the failing boundary first, then apply the targeted recovery procedure. For production deployments, prioritize the identified roadmap gaps: durable background queues, persistent storage for packages and VIM configs, safe migration execution, database-aware health probes, and graceful termination windows.
+
+> **Referenced Files in This Document**
+>
+> - `docs/ERROR_HANDLING_AND_VALIDATION_ARCHITECTURE.md`
+> - `docs/OPENSTACK_VIM_ADAPTER.md`
+> - `src/VimAdapter/README.md`
+> - `docs/DEPLOYMENT.md`
+> - `docs/GETTING-STARTED.md`
+> - `docs/CONFIGURATION.md`
+> - `docs/PRODUCTION_READINESS_AND_KUBERNETES_RESTART_RECOVERABILITY_AUDIT.md`
+> - `docker-compose.yml`
+> - `docker-compose.infra.yml`
+> - `src/Meao/appsettings.json`
+> - `src/PlatformManager/PlatformManager/appsettings.json`
+> - `src/ApmApi/appsettings.json`
+> - `src/Catalogue/appsettings.json`
+> - `charts/optimist-apps/values.yaml`
+> - `charts/optimist-apps/templates/deployment.yaml`
+> - `.github/workflows/cd.yml`

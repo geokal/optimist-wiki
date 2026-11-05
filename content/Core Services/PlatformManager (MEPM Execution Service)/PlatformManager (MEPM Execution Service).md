@@ -1,26 +1,5 @@
 # PlatformManager (MEPM Execution Service)
 
-<cite>
-**Referenced Files in This Document**
-- `src/PlatformManager/PlatformManager/Endpoints/LcmEndpoint.cs`
-- `src/PlatformManager/PlatformManager/Endpoints/AppInstanceEndpoints.cs`
-- `src/PlatformManager/PlatformManager/Endpoints/PlatformConfigEndpoints.cs`
-- `src/PlatformManager/PlatformManager/Program.cs`
-- `src/PlatformManager/PlatformManager/Services/AppInstanceService.cs`
-- `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
-- `src/PlatformManager/PlatformManager/Services/LcmWorkQueue.cs`
-- `src/PlatformManager/PlatformManager/Services/PluginAdapter/PluginFactory.cs`
-- `src/PlatformManager/PlatformManager/Services/PluginAdapter/GrpcFactory.cs`
-- `src/PlatformManager/PlatformManager/Services/PluginAdapter/IGrpcClient.cs`
-- `src/PlatformManager/PlatformManager/Services/PluginAdapter/GrpcClient.cs`
-- `src/PlatformManager/PlatformManager/Services/PluginAdapter/PluginAdapter.cs`
-- `src/PlatformManager/PlatformManager/Data/LcmDbContext.cs`
-- `src/PlatformManager/PlatformManager/Models/AppInstance.cs`
-- `src/PlatformManager/PlatformManager/Models/AppInstanceLcmOpOcc.cs`
-- `src/PlatformManager/PlatformManager/Models/LcmConstants.cs`
-- `docs/contexts/platformmanager.md`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -628,3 +607,23 @@ Common operational issues and their likely causes:
 The PlatformManager service is the MEPM execution layer that turns ETSI lifecycle requests into durable, observable, and recoverable VIM operations. Its design separates HTTP routing from long-running execution, uses an adapter factory for pluggable VIM backends, and persists authoritative state in `AppInstance` and `AppLcmOpOcc`. Crash-safe replay, per-operation timeouts, gRPC retry policies, and subscription notifications together provide a robust foundation for distributed lifecycle management across heterogeneous VIM environments.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `src/PlatformManager/PlatformManager/Endpoints/LcmEndpoint.cs`
+> - `src/PlatformManager/PlatformManager/Endpoints/AppInstanceEndpoints.cs`
+> - `src/PlatformManager/PlatformManager/Endpoints/PlatformConfigEndpoints.cs`
+> - `src/PlatformManager/PlatformManager/Program.cs`
+> - `src/PlatformManager/PlatformManager/Services/AppInstanceService.cs`
+> - `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
+> - `src/PlatformManager/PlatformManager/Services/LcmWorkQueue.cs`
+> - `src/PlatformManager/PlatformManager/Services/PluginAdapter/PluginFactory.cs`
+> - `src/PlatformManager/PlatformManager/Services/PluginAdapter/GrpcFactory.cs`
+> - `src/PlatformManager/PlatformManager/Services/PluginAdapter/IGrpcClient.cs`
+> - `src/PlatformManager/PlatformManager/Services/PluginAdapter/GrpcClient.cs`
+> - `src/PlatformManager/PlatformManager/Services/PluginAdapter/PluginAdapter.cs`
+> - `src/PlatformManager/PlatformManager/Data/LcmDbContext.cs`
+> - `src/PlatformManager/PlatformManager/Models/AppInstance.cs`
+> - `src/PlatformManager/PlatformManager/Models/AppInstanceLcmOpOcc.cs`
+> - `src/PlatformManager/PlatformManager/Models/LcmConstants.cs`
+> - `docs/contexts/platformmanager.md`

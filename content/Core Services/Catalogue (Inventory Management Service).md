@@ -1,32 +1,5 @@
 # Catalogue (Inventory Management Service)
 
-<cite>
-**Referenced Files in This Document**   
-- `src/Catalogue/Program.cs`
-- `src/Catalogue/ApiContext.cs`
-- `src/Catalogue/Endpoints/MecHostEndpoints.cs`
-- `src/Catalogue/Endpoints/AppInstanceEndpoints.cs`
-- `src/Catalogue/Endpoints/AppPackageEndpoints.cs`
-- `src/Catalogue/Endpoints/MepmEndpoints.cs`
-- `src/Catalogue/Endpoints/TopologyEndpoints.cs`
-- `src/Catalogue/Models/EdgeHost.cs`
-- `src/Catalogue/Models/AppInstance.cs`
-- `src/Catalogue/Models/AppPackage.cs`
-- `src/Catalogue/Models/Mepm.cs`
-- `src/Catalogue/Models/MecServiceInfo.cs`
-- `src/Catalogue/Models/Site.cs`
-- `src/Catalogue/Models/HostSiteAssignment.cs`
-- `src/Catalogue/Models/LatencyLink.cs`
-- `src/Catalogue/Models/ReserveCapacityRequest.cs`
-- `src/Catalogue/Models/ReleaseCapacityRequest.cs`
-- `src/Catalogue/Models/UpdateResourcesRequest.cs`
-- `docs/ADR/0010-catalogue-meo-inventory.md`
-- `docs/ADR/0038-mep-host-service-registry-and-meo-catalogue-sync.md`
-- `docs/ADR/0045-meo-placement-engine-and-unified-catalogue-inventory-model.md`
-- `docs/contexts/catalogue.md`
-- `docs/CATALOGUE_ASSESSMENT.md`
-</cite>
-
 ## Table of Contents
 
 1. [Introduction](#introduction)
@@ -854,3 +827,29 @@ For long-term accuracy, operators should ensure:
 - Package onboarding workflows honor ownership and state-transition rules
 - Topology data remains consistent with real network characteristics
 - Read-heavy consumers consider adding a safe, invalidated cache layer if performance requires it
+
+> **Referenced Files in This Document**
+>
+> - `src/Catalogue/Program.cs`
+> - `src/Catalogue/ApiContext.cs`
+> - `src/Catalogue/Endpoints/MecHostEndpoints.cs`
+> - `src/Catalogue/Endpoints/AppInstanceEndpoints.cs`
+> - `src/Catalogue/Endpoints/AppPackageEndpoints.cs`
+> - `src/Catalogue/Endpoints/MepmEndpoints.cs`
+> - `src/Catalogue/Endpoints/TopologyEndpoints.cs`
+> - `src/Catalogue/Models/EdgeHost.cs`
+> - `src/Catalogue/Models/AppInstance.cs`
+> - `src/Catalogue/Models/AppPackage.cs`
+> - `src/Catalogue/Models/Mepm.cs`
+> - `src/Catalogue/Models/MecServiceInfo.cs`
+> - `src/Catalogue/Models/Site.cs`
+> - `src/Catalogue/Models/HostSiteAssignment.cs`
+> - `src/Catalogue/Models/LatencyLink.cs`
+> - `src/Catalogue/Models/ReserveCapacityRequest.cs`
+> - `src/Catalogue/Models/ReleaseCapacityRequest.cs`
+> - `src/Catalogue/Models/UpdateResourcesRequest.cs`
+> - `docs/ADR/0010-catalogue-meo-inventory.md`
+> - `docs/ADR/0038-mep-host-service-registry-and-meo-catalogue-sync.md`
+> - `docs/ADR/0045-meo-placement-engine-and-unified-catalogue-inventory-model.md`
+> - `docs/contexts/catalogue.md`
+> - `docs/CATALOGUE_ASSESSMENT.md`

@@ -1,22 +1,5 @@
 # Workflow Activities
 
-<cite>
-**Referenced Files in This Document**
-- `src/Meao/Program.cs`
-- `src/Meao/Activities/AuthActivities.cs`
-- `src/Meao/Activities/GrantActivities.cs`
-- `src/Meao/Activities/AppInstanceActivities.cs`
-- `src/Meao/Activities/ApmActivities.cs`
-- `src/Meao/Activities/MepmActivities.cs`
-- `src/Meao/Activities/PlacementActivities.cs`
-- `src/Meao/Activities/CatalogueActivities.cs`
-- `src/Meao/Utils/HttpActivityHelper.cs`
-- `src/Meao/Infrastructure/TemporalWorkflowExceptionHandler.cs`
-- `src/Meao/Infrastructure/MeaoHttpClientRegistration.cs`
-- `src/Meao.Tests.Unit/ApmAndAuthActivitiesTests.cs`
-- `src/Meao.Tests.Unit/PlacementActivitiesTests.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -475,3 +458,19 @@ flowchart TD
 
 ## Conclusion
 The MEAO activity layer isolates side effects from workflow logic while preserving deterministic replay behavior. Each activity class focuses on a bounded responsibility: authentication, grants, app-instance persistence, APM onboarding, MEPM lifecycle management, placement, and catalogue inventory. External calls are routed through carefully configured HTTP clients, errors are mapped to structured application failures, and cancellation is propagated consistently. Testing relies on constructor-injected dependencies, fake HTTP handlers, mock placement engines, and optional integration fixtures. Together, these patterns provide a durable, observable, and testable foundation for long-running MEAO workflows.
+
+> **Referenced Files in This Document**
+>
+> - `src/Meao/Program.cs`
+> - `src/Meao/Activities/AuthActivities.cs`
+> - `src/Meao/Activities/GrantActivities.cs`
+> - `src/Meao/Activities/AppInstanceActivities.cs`
+> - `src/Meao/Activities/ApmActivities.cs`
+> - `src/Meao/Activities/MepmActivities.cs`
+> - `src/Meao/Activities/PlacementActivities.cs`
+> - `src/Meao/Activities/CatalogueActivities.cs`
+> - `src/Meao/Utils/HttpActivityHelper.cs`
+> - `src/Meao/Infrastructure/TemporalWorkflowExceptionHandler.cs`
+> - `src/Meao/Infrastructure/MeaoHttpClientRegistration.cs`
+> - `src/Meao.Tests.Unit/ApmAndAuthActivitiesTests.cs`
+> - `src/Meao.Tests.Unit/PlacementActivitiesTests.cs`

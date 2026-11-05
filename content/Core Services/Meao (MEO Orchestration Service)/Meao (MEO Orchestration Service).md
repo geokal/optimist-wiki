@@ -1,38 +1,5 @@
 # Meao (MEO Orchestration Service)
 
-<cite>
-**Referenced Files in This Document**   
-- `src/Meao/Program.cs`
-- `src/Meao/appsettings.json`
-- `src/Meao/Endpoints/GrantEndpoints.cs`
-- `src/Meao/Endpoints/AppInstanceEndpoints.cs`
-- `src/Meao/Endpoints/AppInstanceInfoEndpoints.cs`
-- `src/Meao/Endpoints/SubscriptionEndpoints.cs`
-- `src/Meao/Workflows/CreateAppInstWF.cs`
-- `src/Meao/Workflows/InstantiateAppInstWF.cs`
-- `src/Meao/Workflows/TerminateAppinstWF.cs`
-- `src/Meao/Workflows/OnboardAppPkgWF.cs`
-- `src/Meao/Domain/Placement/PlacementEngine.cs`
-- `src/Meao/Domain/Placement/IPlacementEngine.cs`
-- `src/Meao/Domain/Placement/IPlacementPolicy.cs`
-- `src/Meao/Domain/Placement/PlacementConstraints.cs`
-- `src/Meao/Domain/Placement/PlacementDecision.cs`
-- `src/Meao/Domain/Placement/Policies/TenantSiteAffinityPolicy.cs`
-- `src/Meao/Domain/Placement/Policies/GpuRequirementPolicy.cs`
-- `src/Meao/Domain/Placement/Policies/CostAwarePolicy.cs`
-- `src/Meao/Activities/PlacementActivities.cs`
-- `src/Meao/Activities/GrantActivities.cs`
-- `src/Meao/Activities/ApmActivities.cs`
-- `src/Meao/Activities/AuthActivities.cs`
-- `src/Meao/Activities/CatalogueActivities.cs`
-- `src/Meao/Activities/MepmActivities.cs`
-- `src/Meao/Utils/GrantHelper.cs`
-- `src/Meao/Infrastructure/KeycloakServiceTokenHandler.cs`
-- `src/Meao/Infrastructure/TemporalWorkflowExceptionHandler.cs`
-- `src/Meao/Services/LcmOpOccCallbackHandler.cs`
-- `src/Meao/Services/SubscriptionRegistrarService.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -540,3 +507,35 @@ Temporal workflow exceptions are handled by `TemporalWorkflowExceptionHandler`. 
 
 ## Conclusion
 Meao implements the MEO orchestration layer by combining strongly typed HTTP contracts, Temporal workflows, a pluggable placement engine, and robust integration with Keycloak, Consul, APM API, Catalogue, PlatformManager, and PostgreSQL. Grants are managed through `/granting/v1`, while application lifecycle flows run under `/meao/v1`. The architecture favors asynchronous durability, deterministic workflows, and clear separation between identity creation, dynamic placement, and VIM coordination. Operators should monitor health checks, workflow history, downstream service availability, and Keycloak token issuance when troubleshooting deployment or grant failures.
+
+> **Referenced Files in This Document**
+>
+> - `src/Meao/Program.cs`
+> - `src/Meao/appsettings.json`
+> - `src/Meao/Endpoints/GrantEndpoints.cs`
+> - `src/Meao/Endpoints/AppInstanceEndpoints.cs`
+> - `src/Meao/Endpoints/AppInstanceInfoEndpoints.cs`
+> - `src/Meao/Endpoints/SubscriptionEndpoints.cs`
+> - `src/Meao/Workflows/CreateAppInstWF.cs`
+> - `src/Meao/Workflows/InstantiateAppInstWF.cs`
+> - `src/Meao/Workflows/TerminateAppinstWF.cs`
+> - `src/Meao/Workflows/OnboardAppPkgWF.cs`
+> - `src/Meao/Domain/Placement/PlacementEngine.cs`
+> - `src/Meao/Domain/Placement/IPlacementEngine.cs`
+> - `src/Meao/Domain/Placement/IPlacementPolicy.cs`
+> - `src/Meao/Domain/Placement/PlacementConstraints.cs`
+> - `src/Meao/Domain/Placement/PlacementDecision.cs`
+> - `src/Meao/Domain/Placement/Policies/TenantSiteAffinityPolicy.cs`
+> - `src/Meao/Domain/Placement/Policies/GpuRequirementPolicy.cs`
+> - `src/Meao/Domain/Placement/Policies/CostAwarePolicy.cs`
+> - `src/Meao/Activities/PlacementActivities.cs`
+> - `src/Meao/Activities/GrantActivities.cs`
+> - `src/Meao/Activities/ApmActivities.cs`
+> - `src/Meao/Activities/AuthActivities.cs`
+> - `src/Meao/Activities/CatalogueActivities.cs`
+> - `src/Meao/Activities/MepmActivities.cs`
+> - `src/Meao/Utils/GrantHelper.cs`
+> - `src/Meao/Infrastructure/KeycloakServiceTokenHandler.cs`
+> - `src/Meao/Infrastructure/TemporalWorkflowExceptionHandler.cs`
+> - `src/Meao/Services/LcmOpOccCallbackHandler.cs`
+> - `src/Meao/Services/SubscriptionRegistrarService.cs`

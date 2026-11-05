@@ -1,31 +1,5 @@
 # Service Boundaries and Bounded Contexts
 
-<cite>
-**Referenced Files in This Document**   
-- `README.md`
-- `docs/ARCHITECTURE.md`
-- `docs/CONTEXT-MAP.md`
-- `docs/contexts/meao.md`
-- `docs/contexts/apmapi.md`
-- `docs/contexts/catalogue.md`
-- `docs/contexts/platformmanager.md`
-- `docs/contexts/vimadapter.md`
-- `docs/ADR/0009-meo-modular-monolith.md`
-- `docs/ADR/0011-per-service-datastores.md`
-- `docs/ADR/0012-vim-adapter-factory.md`
-- `docs/ADR/0017-vimadapter-python.md`
-- `docs/ADR/0025-rfc7807-structured-error-model.md`
-- `docs/ADR/0039-durable-background-processing-queue.md`
-- `docs/ADR/0043-mm3-cross-cluster-dynamic-mepm-routing.md`
-- `docs/ADR/0048-canonical-wire-contracts-and-bounded-context-realignment.md`
-- `docs/ADR/0057-meao-internal-apmapi-service-token-authentication.md`
-- `docs/ADR/0059-etsi-subscription-callback-authentication-and-prefix-hardening.md`
-- `src/Meao/appsettings.json`
-- `src/ApmApi/appsettings.json`
-- `src/Catalogue/appsettings.json`
-- `src/PlatformManager/PlatformManager/appsettings.json`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -549,3 +523,28 @@ Optimist.Orchestrator models clear service boundaries around ETSI MEC roles:
 Services communicate over well-defined contracts: REST for ETSI and internal orchestration boundaries, and gRPC for the VIM boundary. Data ownership is strict: each service has its own database, and cross-service consistency is eventual. Authentication is enforced at service boundaries, with special care taken to avoid leaking credentials into durable workflow histories. Errors are structured, correlatable, and designed for observability and recovery.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `README.md`
+> - `docs/ARCHITECTURE.md`
+> - `docs/CONTEXT-MAP.md`
+> - `docs/contexts/meao.md`
+> - `docs/contexts/apmapi.md`
+> - `docs/contexts/catalogue.md`
+> - `docs/contexts/platformmanager.md`
+> - `docs/contexts/vimadapter.md`
+> - `docs/ADR/0009-meo-modular-monolith.md`
+> - `docs/ADR/0011-per-service-datastores.md`
+> - `docs/ADR/0012-vim-adapter-factory.md`
+> - `docs/ADR/0017-vimadapter-python.md`
+> - `docs/ADR/0025-rfc7807-structured-error-model.md`
+> - `docs/ADR/0039-durable-background-processing-queue.md`
+> - `docs/ADR/0043-mm3-cross-cluster-dynamic-mepm-routing.md`
+> - `docs/ADR/0048-canonical-wire-contracts-and-bounded-context-realignment.md`
+> - `docs/ADR/0057-meao-internal-apmapi-service-token-authentication.md`
+> - `docs/ADR/0059-etsi-subscription-callback-authentication-and-prefix-hardening.md`
+> - `src/Meao/appsettings.json`
+> - `src/ApmApi/appsettings.json`
+> - `src/Catalogue/appsettings.json`
+> - `src/PlatformManager/PlatformManager/appsettings.json`

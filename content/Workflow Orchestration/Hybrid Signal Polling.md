@@ -1,17 +1,5 @@
 # Hybrid Signal Polling
 
-<cite>
-**Referenced Files in This Document**
-- `src/Meao/Workflows/Common/HybridSignalPollHelper.cs`
-- `src/Meao/Workflows/InstantiateAppInstWF.cs`
-- `src/Meao/Workflows/TerminateAppinstWF.cs`
-- `src/Meao/Workflows/Policies/ActivityPolicies.cs`
-- `src/Meao/Services/ILcmOpOccSignalDispatcher.cs`
-- `src/Meao/Models/LcmOpOccSignal.cs`
-- `src/Meao/Activities/ApmActivities.cs`
-- `docs/ADR/0014-status-sync-option-a-polling.md`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -504,3 +492,14 @@ The hybrid signal polling mechanism provides a robust balance between immediate 
 For future evolution, the repository already retains the MEPM subscription and notification infrastructure described in the relevant ADR. As push-based delivery matures, the signal fast-path can become dominant while the polling fallback remains the durability guarantee for eventual consistency.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `src/Meao/Workflows/Common/HybridSignalPollHelper.cs`
+> - `src/Meao/Workflows/InstantiateAppInstWF.cs`
+> - `src/Meao/Workflows/TerminateAppinstWF.cs`
+> - `src/Meao/Workflows/Policies/ActivityPolicies.cs`
+> - `src/Meao/Services/ILcmOpOccSignalDispatcher.cs`
+> - `src/Meao/Models/LcmOpOccSignal.cs`
+> - `src/Meao/Activities/ApmActivities.cs`
+> - `docs/ADR/0014-status-sync-option-a-polling.md`

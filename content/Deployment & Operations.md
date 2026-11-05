@@ -1,32 +1,5 @@
 # Deployment & Operations
 
-<cite>
-**Referenced Files in This Document**   
-- `README.md`
-- `docs/DEPLOYMENT.md`
-- `docs/CONFIGURATION.md`
-- `scripts/ci_verify.sh`
-- `scripts/local_cd.sh`
-- `scripts/verify_adr_validations.py`
-- `global.json`
-- `.github/workflows/ci.yml`
-- `.github/workflows/cd.yml`
-- `.github/workflows/rollback.yml`
-- `gitops/bootstrap/root-app.yaml`
-- `scripts/bump_gitops_tags.py`
-- `build-images.sh`
-- `docker-compose.yml`
-- `docker-compose.infra.yml`
-- `docker-compose.override.yml`
-- `kind.ci.yaml`
-- `terraform/README.md`
-- `terraform/compute.tf`
-- `terraform/network.tf`
-- `terraform/variables.tf`
-- `ansible/site.yml`
-- `ansible/README.md`
-</cite>
-
 ## Update Summary
 **Changes Made**
 - Added documentation for `scripts/ci_verify.sh` as the local replica of CI verification gates
@@ -834,3 +807,29 @@ The introduction of mandatory behavioral correctness gates in the local CD path 
 For production operations, treat Git as the single source of truth, keep database migrations forward-compatible, centralize observability, manage secrets through External Secrets Operator, and use rollbacks as forward Git changes rather than imperative cluster edits. The enhanced local verification process ensures that the quality bar raised in CI is maintained throughout the entire development workflow.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `README.md`
+> - `docs/DEPLOYMENT.md`
+> - `docs/CONFIGURATION.md`
+> - `scripts/ci_verify.sh`
+> - `scripts/local_cd.sh`
+> - `scripts/verify_adr_validations.py`
+> - `global.json`
+> - `.github/workflows/ci.yml`
+> - `.github/workflows/cd.yml`
+> - `.github/workflows/rollback.yml`
+> - `gitops/bootstrap/root-app.yaml`
+> - `scripts/bump_gitops_tags.py`
+> - `build-images.sh`
+> - `docker-compose.yml`
+> - `docker-compose.infra.yml`
+> - `docker-compose.override.yml`
+> - `kind.ci.yaml`
+> - `terraform/README.md`
+> - `terraform/compute.tf`
+> - `terraform/network.tf`
+> - `terraform/variables.tf`
+> - `ansible/site.yml`
+> - `ansible/README.md`

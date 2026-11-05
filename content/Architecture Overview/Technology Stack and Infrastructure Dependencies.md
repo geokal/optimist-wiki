@@ -1,37 +1,5 @@
 # Technology Stack and Infrastructure Dependencies
 
-<cite>
-**Referenced Files in This Document**   
-- `README.md`
-- `docs/ARCHITECTURE.md`
-- `docs/DEPLOYMENT.md`
-- `docker-compose.yml`
-- `docker-compose.infra.yml`
-- `Tiltfile`
-- `charts/optimist-apps/values.yaml`
-- `charts/optimist-apps/Chart.yaml`
-- `charts/optimist-apps/templates/deployment.yaml`
-- `gitops/bootstrap/root-app.yaml`
-- `.github/workflows/ci.yml`
-- `.github/workflows/cd.yml`
-- `terraform/README.md`
-- `terraform/providers.tf`
-- `terraform/compute.tf`
-- `terraform/network.tf`
-- `terraform/variables.tf`
-- `src/VimAdapter/Dockerfile`
-- `src/VimAdapter/requirements.txt`
-- `src/Meao/Dockerfile`
-- `src/ApmApi/Dockerfile`
-- `src/Catalogue/Dockerfile`
-- `docs/ADR/0006-temporal-orchestration-engine.md`
-- `docs/ADR/0007-apisix-api-gateway.md`
-- `docs/ADR/0008-consul-service-discovery.md`
-- `docs/ADR/0017-vimadapter-python.md`
-- `docs/ADR/0023-dotnet8-baseline.md`
-- `docs/ADR/0047-declarative-gitops-cad-argocd-app-of-apps.md`
-</cite>
-
 ## Table of Contents
 1. Introduction
 2. Project Structure
@@ -693,3 +661,34 @@ For reliable operations:
 - Plan OCI substrate changes separately from in-cluster application deployments.
 
 [No sources needed since this section summarizes without analyzing specific files]
+
+> **Referenced Files in This Document**
+>
+> - `README.md`
+> - `docs/ARCHITECTURE.md`
+> - `docs/DEPLOYMENT.md`
+> - `docker-compose.yml`
+> - `docker-compose.infra.yml`
+> - `Tiltfile`
+> - `charts/optimist-apps/values.yaml`
+> - `charts/optimist-apps/Chart.yaml`
+> - `charts/optimist-apps/templates/deployment.yaml`
+> - `gitops/bootstrap/root-app.yaml`
+> - `.github/workflows/ci.yml`
+> - `.github/workflows/cd.yml`
+> - `terraform/README.md`
+> - `terraform/providers.tf`
+> - `terraform/compute.tf`
+> - `terraform/network.tf`
+> - `terraform/variables.tf`
+> - `src/VimAdapter/Dockerfile`
+> - `src/VimAdapter/requirements.txt`
+> - `src/Meao/Dockerfile`
+> - `src/ApmApi/Dockerfile`
+> - `src/Catalogue/Dockerfile`
+> - `docs/ADR/0006-temporal-orchestration-engine.md`
+> - `docs/ADR/0007-apisix-api-gateway.md`
+> - `docs/ADR/0008-consul-service-discovery.md`
+> - `docs/ADR/0017-vimadapter-python.md`
+> - `docs/ADR/0023-dotnet8-baseline.md`
+> - `docs/ADR/0047-declarative-gitops-cad-argocd-app-of-apps.md`

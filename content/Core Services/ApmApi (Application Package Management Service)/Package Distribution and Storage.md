@@ -1,24 +1,5 @@
 # Package Distribution and Storage
 
-<cite>
-**Referenced Files in This Document**
-- `docs/CSAR_DISTRIBUTION_AND_LIFECYCLE_ARCHITECTURE.md`
-- `docs/ARCHITECTURE.md`
-- `docs/ADR/0029-mepm-package-distribution-vs-onboarding.md`
-- `docs/ADR/0039-durable-background-processing-queue.md`
-- `docs/ADR/0041-oci-zot-oras-csar-distribution.md`
-- `docs/ADR/0061-kubernetes-persistent-storage-and-in-cluster-zot-registry.md`
-- `src/ApmApi/Endpoints/ApmEndpoints.cs`
-- `src/ApmApi/Background/AppDBackgroundWorker.cs`
-- `src/ApmApi/Services/FileSystemCsarStagingStore.cs`
-- `src/ApmApi/Services/FileSystemOnboardedPackageStore.cs`
-- `src/PlatformManager/PlatformManager/Services/PackageService.cs`
-- `src/PlatformManager/PlatformManager/Services/OrasDistributionClient.cs`
-- `src/PlatformManager/PlatformManager/Services/CsarPreStageSubscriber.cs`
-- `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
-- `src/PlatformManager/PlatformManager/Services/LcmWorkQueue.cs`
-</cite>
-
 ## Table of Contents
 1. Introduction
 2. Project Structure
@@ -553,3 +534,21 @@ The package distribution and storage design separates concerns cleanly:
 - Persistent volumes and a three-tier Zot chain make the system resilient to pod restarts and improve distribution performance.
 
 For production environments, operators should monitor staging claims, descriptor dead letters, OCI metrics, pre-stage success rates, lifecycle op-occ states, and persistent volume retention. Disaster recovery should focus on restoring durable package files, reconciling stale op-occ rows, and re-onboarding artifacts whose registry references no longer resolve.
+
+> **Referenced Files in This Document**
+>
+> - `docs/CSAR_DISTRIBUTION_AND_LIFECYCLE_ARCHITECTURE.md`
+> - `docs/ARCHITECTURE.md`
+> - `docs/ADR/0029-mepm-package-distribution-vs-onboarding.md`
+> - `docs/ADR/0039-durable-background-processing-queue.md`
+> - `docs/ADR/0041-oci-zot-oras-csar-distribution.md`
+> - `docs/ADR/0061-kubernetes-persistent-storage-and-in-cluster-zot-registry.md`
+> - `src/ApmApi/Endpoints/ApmEndpoints.cs`
+> - `src/ApmApi/Background/AppDBackgroundWorker.cs`
+> - `src/ApmApi/Services/FileSystemCsarStagingStore.cs`
+> - `src/ApmApi/Services/FileSystemOnboardedPackageStore.cs`
+> - `src/PlatformManager/PlatformManager/Services/PackageService.cs`
+> - `src/PlatformManager/PlatformManager/Services/OrasDistributionClient.cs`
+> - `src/PlatformManager/PlatformManager/Services/CsarPreStageSubscriber.cs`
+> - `src/PlatformManager/PlatformManager/Services/LcmWorkerService.cs`
+> - `src/PlatformManager/PlatformManager/Services/LcmWorkQueue.cs`

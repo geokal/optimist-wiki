@@ -1,24 +1,5 @@
 # Architecture Overview
 
-<cite>
-**Referenced Files in This Document**   
-- `README.md`
-- `SPEC.md`
-- `ARCHITECTURE_ASSESSMENT.md`
-- `docs/ARCHITECTURE.md`
-- `docs/CONTEXT-MAP.md`
-- `docs/DEPLOYMENT.md`
-- `docs/contexts/meao.md`
-- `docs/contexts/apmapi.md`
-- `docs/contexts/catalogue.md`
-- `docs/contexts/platformmanager.md`
-- `docs/contexts/vimadapter.md`
-- `src/Meao/Program.cs`
-- `src/ApmApi/Program.cs`
-- `src/Catalogue/Program.cs`
-- `src/PlatformManager/PlatformManager/Program.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -608,3 +589,21 @@ The system’s durability comes from Temporal workflows, its security from Keycl
 **Section sources**
 - `README.md#L45-L117`
 - `docs/ARCHITECTURE.md#L80-L117`
+
+> **Referenced Files in This Document**
+>
+> - `README.md`
+> - `SPEC.md`
+> - `ARCHITECTURE_ASSESSMENT.md`
+> - `docs/ARCHITECTURE.md`
+> - `docs/CONTEXT-MAP.md`
+> - `docs/DEPLOYMENT.md`
+> - `docs/contexts/meao.md`
+> - `docs/contexts/apmapi.md`
+> - `docs/contexts/catalogue.md`
+> - `docs/contexts/platformmanager.md`
+> - `docs/contexts/vimadapter.md`
+> - `src/Meao/Program.cs`
+> - `src/ApmApi/Program.cs`
+> - `src/Catalogue/Program.cs`
+> - `src/PlatformManager/PlatformManager/Program.cs`

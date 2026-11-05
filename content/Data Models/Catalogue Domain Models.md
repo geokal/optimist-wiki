@@ -1,21 +1,5 @@
 # Catalogue Domain Models
 
-<cite>
-**Referenced Files in This Document**
-- `src/Catalogue/Program.cs`
-- `src/Catalogue/ApiContext.cs`
-- `src/Catalogue/Models/EdgeHost.cs`
-- `src/Catalogue/Models/MecServiceInfo.cs`
-- `src/Catalogue/Models/HostSiteAssignment.cs`
-- `src/Catalogue/Models/Site.cs`
-- `src/Catalogue/Models/LatencyLink.cs`
-- `src/Catalogue/Models/Mepm.cs`
-- `src/Catalogue/Endpoints/MecHostEndpoints.cs`
-- `src/Catalogue/Endpoints/MepmEndpoints.cs`
-- `src/Catalogue/Validators/EdgeHostValidator.cs`
-- `src/Catalogue/Validators/CapacityValidators.cs`
-</cite>
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -700,3 +684,18 @@ Important boundaries to keep in mind:
 - Consistency relies on optimistic concurrency and careful caller retry logic.
 
 For large MEC deployments, scaling should consider pagination, caching of stable topology, separation of volatile capacity updates, and monitoring of optimistic concurrency conflicts. The current design balances simplicity, strong typing, and practical constraints while leaving room for future placement policy and topology extensions.
+
+> **Referenced Files in This Document**
+>
+> - `src/Catalogue/Program.cs`
+> - `src/Catalogue/ApiContext.cs`
+> - `src/Catalogue/Models/EdgeHost.cs`
+> - `src/Catalogue/Models/MecServiceInfo.cs`
+> - `src/Catalogue/Models/HostSiteAssignment.cs`
+> - `src/Catalogue/Models/Site.cs`
+> - `src/Catalogue/Models/LatencyLink.cs`
+> - `src/Catalogue/Models/Mepm.cs`
+> - `src/Catalogue/Endpoints/MecHostEndpoints.cs`
+> - `src/Catalogue/Endpoints/MepmEndpoints.cs`
+> - `src/Catalogue/Validators/EdgeHostValidator.cs`
+> - `src/Catalogue/Validators/CapacityValidators.cs`

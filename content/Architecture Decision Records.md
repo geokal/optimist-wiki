@@ -1,30 +1,5 @@
 # Architecture Decision Records
 
-<cite>
-**Referenced Files in This Document**   
-- `docs/ADR/README.md`
-- `docs/ADR/0005-async-vim-execution.md`
-- `docs/ADR/0006-temporal-orchestration-engine.md`
-- `docs/ADR/0009-meo-modular-monolith.md`
-- `docs/ADR/0013-grpc-mm6-transport.md`
-- `docs/ADR/0014-status-sync-option-a-polling.md`
-- `docs/ADR/0017-vimadapter-python.md`
-- `docs/ADR/0023-dotnet8-baseline.md`
-- `docs/ADR/0039-durable-background-processing-queue.md`
-- `docs/ADR/0047-declarative-gitops-cd-argocd-app-of-apps.md`
-- `docs/ADR/0048-canonical-wire-contracts-and-bounded-context-realignment.md`
-- `docs/ADR/0051-tactical-ddd-strongly-typed-ids-and-rich-aggregates.md`
-- `docs/ADR/0056-kubernetes-helm-pre-upgrade-migration-hooks-and-database-readiness.md`
-- `docs/ADR/0057-meao-internal-apmapi-service-token-authentication.md`
-- `docs/ADR/0059-etsi-subscription-callback-authentication-and-prefix-hardening.md`
-- `docs/ADR/0062-uv-as-sole-python-toolchain.md`
-- `.planning/phases/49-meo-fronted-onboarding-option-c-meo-as-sole-public-package-s/49-DESCOPED.md`
-- `.planning/ROADMAP.md`
-- `.planning/REQUIREMENTS.md`
-- `.planning/STATE.md`
-- `.planning/todos/pending/committed-live-credentials-and-secret-scan-gap.md`
-</cite>
-
 ## Update Summary
 **Changes Made**
 - Updated the "ETSI MEC Compliance Decisions" section to reflect Phase 49's formal descoping and the Deferred status of requirements REQ-ONB-03 through REQ-ONB-08.
@@ -698,3 +673,27 @@ The Optimist.Orchestrator architecture is defined by a small set of durable deci
 - Phase 49's six requirements (REQ-ONB-03 through REQ-ONB-08) are Deferred, and its ten plans remain only on the archived branch `gsd/phase-49-target-surface-map`; Phase 51's dependencies were corrected to Phases 47 and 50, leaving an open design question about which digest to pin (claim.Sha256 vs CsarDigest) rather than a missing publisher implementation.
 
 For ongoing development, always check the ADR index first, cite the relevant ADR by number, and ground new decisions in the same Context–Decision–Consequences–Validation structure. For secrets and credentials, treat bootstrap material and runtime secrets as distinct categories and record the full operational rotation procedure rather than only the mechanism. For abandoned architectural options, distinguish clearly between work that is paused (still executable) and work that is descoped (abandoned, with artifacts archived separately).
+
+> **Referenced Files in This Document**
+>
+> - `docs/ADR/README.md`
+> - `docs/ADR/0005-async-vim-execution.md`
+> - `docs/ADR/0006-temporal-orchestration-engine.md`
+> - `docs/ADR/0009-meo-modular-monolith.md`
+> - `docs/ADR/0013-grpc-mm6-transport.md`
+> - `docs/ADR/0014-status-sync-option-a-polling.md`
+> - `docs/ADR/0017-vimadapter-python.md`
+> - `docs/ADR/0023-dotnet8-baseline.md`
+> - `docs/ADR/0039-durable-background-processing-queue.md`
+> - `docs/ADR/0047-declarative-gitops-cd-argocd-app-of-apps.md`
+> - `docs/ADR/0048-canonical-wire-contracts-and-bounded-context-realignment.md`
+> - `docs/ADR/0051-tactical-ddd-strongly-typed-ids-and-rich-aggregates.md`
+> - `docs/ADR/0056-kubernetes-helm-pre-upgrade-migration-hooks-and-database-readiness.md`
+> - `docs/ADR/0057-meao-internal-apmapi-service-token-authentication.md`
+> - `docs/ADR/0059-etsi-subscription-callback-authentication-and-prefix-hardening.md`
+> - `docs/ADR/0062-uv-as-sole-python-toolchain.md`
+> - `.planning/phases/49-meo-fronted-onboarding-option-c-meo-as-sole-public-package-s/49-DESCOPED.md`
+> - `.planning/ROADMAP.md`
+> - `.planning/REQUIREMENTS.md`
+> - `.planning/STATE.md`
+> - `.planning/todos/pending/committed-live-credentials-and-secret-scan-gap.md`
